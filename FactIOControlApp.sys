@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<System Name="FactIOControlApp" Comment="">
+	<VersionInfo Version="1.0" Author="Tuojian" Date="2021-06-10">
+	</VersionInfo>
+	<Application Name="FactIOControlAppApp" Comment="">
+		<SubAppNetwork>
+			<FB Name="AtExit" Type="SUBSCRIBE_1" Comment="" x="0.0" y="500.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://35.228.36.148:4840#;/Objects/1:AtExit]"/>
+			</FB>
+			<FB Name="E_SWITCH" Type="E_SWITCH" Comment="" x="2000.0" y="750.0">
+			</FB>
+			<FB Name="E_SR" Type="E_SR" Comment="" x="3250.0" y="750.0">
+			</FB>
+			<FB Name="ExitConv" Type="CLIENT_1_0" Comment="" x="4875.0" y="375.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[WRITE;opc.tcp://35.228.36.148:4840#;/Objects/1:ExitConv]"/>
+			</FB>
+			<FB Name="E_DELAY" Type="E_DELAY" Comment="" x="6875.0" y="375.0">
+				<Parameter Name="DT" Value="T#3s"/>
+			</FB>
+			<FB Name="E_SWITCH_1" Type="E_SWITCH" Comment="" x="10250.0" y="500.0">
+			</FB>
+			<FB Name="E_SWITCH_2" Type="E_SWITCH" Comment="" x="10250.0" y="1625.0">
+			</FB>
+			<FB Name="SUBSCRIBE_2" Type="SUBSCRIBE_1" Comment="" x="8500.0" y="375.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:AtExit]"/>
+			</FB>
+			<FB Name="SUBSCRIBE_3" Type="SUBSCRIBE_1" Comment="" x="8500.0" y="1750.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:Start]"/>
+			</FB>
+			<FB Name="SUBSCRIBE_4" Type="SUBSCRIBE_1" Comment="" x="8500.0" y="3000.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:AtEntry2]"/>
+			</FB>
+			<FB Name="SUBSCRIBE_5" Type="SUBSCRIBE_1" Comment="" x="8500.0" y="4250.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:AtTrans2]"/>
+			</FB>
+			<FB Name="SUBSCRIBE_6" Type="SUBSCRIBE_1" Comment="" x="8500.0" y="5500.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:AtTrans1]"/>
+			</FB>
+			<FB Name="SUBSCRIBE_7" Type="SUBSCRIBE_1" Comment="" x="11987.5" y="287.5">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:ExitConv]"/>
+			</FB>
+			<FB Name="SUBSCRIBE_8" Type="SUBSCRIBE_1" Comment="" x="12212.5" y="1687.5">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:Conveyor2]"/>
+			</FB>
+			<FB Name="SUBSCRIBE_9" Type="SUBSCRIBE_1" Comment="" x="11987.5" y="2837.5">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:Load2]"/>
+			</FB>
+			<FB Name="SUBSCRIBE_10" Type="SUBSCRIBE_1" Comment="" x="12150.0" y="4000.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:TransLeft2]"/>
+			</FB>
+			<FB Name="SUBSCRIBE_11" Type="SUBSCRIBE_1" Comment="" x="12200.0" y="4987.5">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:TransLeft1]"/>
+			</FB>
+			<FB Name="SUBSCRIBE_12" Type="SUBSCRIBE_1" Comment="" x="12212.5" y="6087.5">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:Load1]"/>
+			</FB>
+			<FB Name="E_SWITCH_3" Type="E_SWITCH" Comment="" x="10125.0" y="3125.0">
+			</FB>
+			<FB Name="E_SWITCH_4" Type="E_SWITCH" Comment="" x="10312.5" y="4450.0">
+			</FB>
+			<FB Name="E_SWITCH_5" Type="E_SWITCH" Comment="" x="10087.5" y="5675.0">
+			</FB>
+			<FB Name="E_SWITCH_6" Type="E_SWITCH" Comment="" x="13812.5" y="412.5">
+			</FB>
+			<FB Name="E_SWITCH_7" Type="E_SWITCH" Comment="" x="13812.5" y="1762.5">
+			</FB>
+			<FB Name="E_SWITCH_8" Type="E_SWITCH" Comment="" x="13675.0" y="2862.5">
+			</FB>
+			<FB Name="E_SWITCH_9" Type="E_SWITCH" Comment="" x="13837.5" y="4100.0">
+			</FB>
+			<FB Name="E_SWITCH_10" Type="E_SWITCH" Comment="" x="13925.0" y="5037.5">
+			</FB>
+			<FB Name="E_SWITCH_11" Type="E_SWITCH" Comment="" x="13837.5" y="6162.5">
+			</FB>
+			<FB Name="TransLeft1" Type="E_SR" Comment="" x="3250.0" y="5125.0">
+			</FB>
+			<FB Name="Start" Type="SUBSCRIBE_1" Comment="" x="0.0" y="1750.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://35.228.36.148:4840#;/Objects/1:Start]"/>
+			</FB>
+			<FB Name="Load1" Type="E_SR" Comment="" x="3331.25" y="6043.75">
+			</FB>
+			<FB Name="AtTrans2" Type="E_SWITCH" Comment="" x="1725.0" y="4868.75">
+			</FB>
+			<FB Name="TransLeft2" Type="E_SR" Comment="" x="3250.0" y="4125.0">
+			</FB>
+			<FB Name="SUBSCRIBE_14" Type="SUBSCRIBE_1" Comment="" x="0.0" y="5625.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://35.228.36.148:4840#;/Objects/1:AtTrans1]"/>
+			</FB>
+			<FB Name="load2" Type="E_SR" Comment="" x="3375.0" y="3000.0">
+			</FB>
+			<FB Name="Conveyor2" Type="E_SR" Comment="" x="3218.75" y="2050.0">
+			</FB>
+			<FB Name="AtTrans1" Type="E_SWITCH" Comment="" x="1725.0" y="5643.75">
+			</FB>
+			<FB Name="AtEntry2" Type="E_SWITCH" Comment="" x="1750.0" y="3000.0">
+			</FB>
+			<FB Name="SUBSCRIBE_15" Type="SUBSCRIBE_1" Comment="" x="43.75" y="4568.75">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://35.228.36.148:4840#;/Objects/1:AtTrans2]"/>
+			</FB>
+			<FB Name="AtEntry2_1" Type="E_SWITCH" Comment="" x="1725.0" y="4093.75">
+			</FB>
+			<FB Name="SUBSCRIBE_16" Type="SUBSCRIBE_1" Comment="" x="43.75" y="3025.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://35.228.36.148:4840#;/Objects/1:AtEntry2]"/>
+			</FB>
+			<FB Name="W_SWITCH_1" Type="E_SWITCH" Comment="" x="1812.5" y="1950.0">
+				<Parameter Name="G" Value="Start"/>
+			</FB>
+			<FB Name="CLIENT_1_1" Type="CLIENT_1_0" Comment="" x="4875.0" y="2000.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[WRITE;opc.tcp://35.228.36.148:4840#;/Objects/1:Conveyor2]"/>
+			</FB>
+			<FB Name="CLIENT_1_2" Type="CLIENT_1_0" Comment="" x="5000.0" y="3125.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[WRITE;opc.tcp://35.228.36.148:4840#;/Objects/1:Load2]"/>
+			</FB>
+			<FB Name="CLIENT_1_3" Type="CLIENT_1_0" Comment="" x="5125.0" y="4125.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[WRITE;opc.tcp://35.228.36.148:4840#;/Objects/1:TransLeft2]"/>
+			</FB>
+			<FB Name="CLIENT_1_4" Type="CLIENT_1_0" Comment="" x="5250.0" y="5000.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[WRITE;opc.tcp://35.228.36.148:4840#;/Objects/1:TransLeft1]"/>
+			</FB>
+			<FB Name="CLIENT_1_5" Type="CLIENT_1_0" Comment="" x="5250.0" y="6000.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[WRITE;opc.tcp://35.228.36.148:4840#;/Objects/1:Load1]"/>
+			</FB>
+			<EventConnections>
+				<Connection Source="AtExit.IND" Destination="E_SWITCH.EI" Comment="" dx1="418.75"/>
+				<Connection Source="AtExit.INITO" Destination="ExitConv.INIT" Comment="" dx1="1668.75"/>
+				<Connection Source="E_SWITCH.EO1" Destination="E_SR.S" Comment="" dx1="368.75"/>
+				<Connection Source="E_SR.EO" Destination="ExitConv.REQ" Comment="" dx1="462.5"/>
+				<Connection Source="E_DELAY.EO" Destination="SUBSCRIBE_2.RSP" Comment="" dx1="575.0"/>
+				<Connection Source="E_DELAY.EO" Destination="SUBSCRIBE_3.RSP" Comment="" dx1="575.0"/>
+				<Connection Source="SUBSCRIBE_3.IND" Destination="E_SWITCH_2.EI" Comment="" dx1="543.75"/>
+				<Connection Source="SUBSCRIBE_2.IND" Destination="E_SWITCH_1.EI" Comment="" dx1="543.75"/>
+				<Connection Source="E_DELAY.EO" Destination="SUBSCRIBE_4.RSP" Comment="" dx1="575.0"/>
+				<Connection Source="E_DELAY.EO" Destination="SUBSCRIBE_5.RSP" Comment="" dx1="575.0"/>
+				<Connection Source="E_DELAY.EO" Destination="SUBSCRIBE_6.RSP" Comment="" dx1="575.0"/>
+				<Connection Source="E_DELAY.EO" Destination="SUBSCRIBE_7.RSP" Comment="" dx1="575.0"/>
+				<Connection Source="E_DELAY.EO" Destination="SUBSCRIBE_8.RSP" Comment="" dx1="575.0"/>
+				<Connection Source="E_DELAY.EO" Destination="SUBSCRIBE_9.RSP" Comment="" dx1="575.0"/>
+				<Connection Source="E_DELAY.EO" Destination="SUBSCRIBE_10.RSP" Comment="" dx1="575.0"/>
+				<Connection Source="E_DELAY.EO" Destination="SUBSCRIBE_11.RSP" Comment="" dx1="575.0"/>
+				<Connection Source="E_DELAY.EO" Destination="SUBSCRIBE_12.RSP" Comment="" dx1="575.0"/>
+				<Connection Source="SUBSCRIBE_4.IND" Destination="E_SWITCH_3.EI" Comment="" dx1="481.25"/>
+				<Connection Source="SUBSCRIBE_5.IND" Destination="E_SWITCH_4.EI" Comment="" dx1="575.0"/>
+				<Connection Source="SUBSCRIBE_6.IND" Destination="E_SWITCH_5.EI" Comment="" dx1="462.5"/>
+				<Connection Source="SUBSCRIBE_7.IND" Destination="E_SWITCH_6.EI" Comment="" dx1="581.25"/>
+				<Connection Source="SUBSCRIBE_8.IND" Destination="E_SWITCH_7.EI" Comment="" dx1="468.75"/>
+				<Connection Source="SUBSCRIBE_9.IND" Destination="E_SWITCH_8.EI" Comment="" dx1="512.5"/>
+				<Connection Source="SUBSCRIBE_10.IND" Destination="E_SWITCH_9.EI" Comment=""/>
+				<Connection Source="SUBSCRIBE_11.IND" Destination="E_SWITCH_10.EI" Comment="" dx1="531.25"/>
+				<Connection Source="SUBSCRIBE_12.IND" Destination="E_SWITCH_11.EI" Comment="" dx1="481.25"/>
+				<Connection Source="AtEntry2_1.EO1" Destination="TransLeft1.S" Comment="" dx1="487.5"/>
+				<Connection Source="AtEntry2_1.EO1" Destination="TransLeft2.S" Comment="" dx1="531.25"/>
+				<Connection Source="AtEntry2.EO1" Destination="load2.S" Comment="" dx1="568.75"/>
+				<Connection Source="W_SWITCH_1.EO0" Destination="Conveyor2.R" Comment="" dx1="356.25"/>
+				<Connection Source="AtTrans2.EO1" Destination="load2.R" Comment="" dx1="356.25"/>
+				<Connection Source="SUBSCRIBE_15.IND" Destination="AtEntry2_1.EI" Comment="" dx1="356.25"/>
+				<Connection Source="W_SWITCH_1.EO1" Destination="Conveyor2.S" Comment=""/>
+				<Connection Source="Start.IND" Destination="W_SWITCH_1.EI" Comment="" dx1="356.25"/>
+				<Connection Source="AtTrans1.EO1" Destination="TransLeft2.R" Comment="" dx1="425.0"/>
+				<Connection Source="AtTrans1.EO1" Destination="TransLeft1.R" Comment="" dx1="556.25"/>
+				<Connection Source="SUBSCRIBE_16.IND" Destination="AtEntry2.EI" Comment="" dx1="525.0"/>
+				<Connection Source="AtTrans1.EO1" Destination="Load1.S" Comment="" dx1="487.5"/>
+				<Connection Source="SUBSCRIBE_15.IND" Destination="AtTrans2.EI" Comment="" dx1="487.5"/>
+				<Connection Source="SUBSCRIBE_14.IND" Destination="AtTrans1.EI" Comment="" dx1="531.25"/>
+				<Connection Source="Conveyor2.EO" Destination="CLIENT_1_1.REQ" Comment="" dx1="831.25"/>
+				<Connection Source="load2.EO" Destination="CLIENT_1_2.REQ" Comment="" dx1="650.0"/>
+				<Connection Source="TransLeft2.EO" Destination="CLIENT_1_3.REQ" Comment="" dx1="700.0"/>
+				<Connection Source="TransLeft1.EO" Destination="CLIENT_1_4.REQ" Comment="" dx1="287.5"/>
+				<Connection Source="Load1.EO" Destination="CLIENT_1_5.REQ" Comment="" dx1="668.75"/>
+				<Connection Source="Start.INITO" Destination="CLIENT_1_1.INIT" Comment="" dx1="2293.75"/>
+				<Connection Source="SUBSCRIBE_16.INITO" Destination="CLIENT_1_2.INIT" Comment="" dx1="2275.0"/>
+				<Connection Source="SUBSCRIBE_15.INITO" Destination="CLIENT_1_3.INIT" Comment="" dx1="2212.5"/>
+				<Connection Source="SUBSCRIBE_15.INITO" Destination="CLIENT_1_4.INIT" Comment="" dx1="2275.0"/>
+				<Connection Source="SUBSCRIBE_14.INITO" Destination="CLIENT_1_5.INIT" Comment="" dx1="2275.0"/>
+			</EventConnections>
+			<DataConnections>
+				<Connection Source="AtExit.RD_1" Destination="E_SWITCH.G" Comment="" dx1="418.75"/>
+				<Connection Source="E_SR.Q" Destination="ExitConv.SD_1" Comment="" dx1="462.5"/>
+				<Connection Source="SUBSCRIBE_2.RD_1" Destination="E_SWITCH_1.G" Comment="" dx1="543.75"/>
+				<Connection Source="SUBSCRIBE_3.RD_1" Destination="E_SWITCH_2.G" Comment="" dx1="543.75"/>
+				<Connection Source="SUBSCRIBE_4.RD_1" Destination="E_SWITCH_3.G" Comment="" dx1="481.25"/>
+				<Connection Source="SUBSCRIBE_5.RD_1" Destination="E_SWITCH_4.G" Comment=""/>
+				<Connection Source="SUBSCRIBE_6.RD_1" Destination="E_SWITCH_5.G" Comment="" dx1="462.5"/>
+				<Connection Source="SUBSCRIBE_7.RD_1" Destination="E_SWITCH_6.G" Comment="" dx1="581.25"/>
+				<Connection Source="SUBSCRIBE_8.RD_1" Destination="E_SWITCH_7.G" Comment="" dx1="468.75"/>
+				<Connection Source="SUBSCRIBE_9.RD_1" Destination="E_SWITCH_8.G" Comment="" dx1="512.5"/>
+				<Connection Source="SUBSCRIBE_10.RD_1" Destination="E_SWITCH_9.G" Comment="" dx1="512.5"/>
+				<Connection Source="SUBSCRIBE_11.RD_1" Destination="E_SWITCH_10.G" Comment="" dx1="531.25"/>
+				<Connection Source="SUBSCRIBE_12.RD_1" Destination="E_SWITCH_11.G" Comment="" dx1="481.25"/>
+				<Connection Source="SUBSCRIBE_15.RD_1" Destination="AtTrans2.G" Comment="" dx1="356.25"/>
+				<Connection Source="SUBSCRIBE_15.RD_1" Destination="AtEntry2_1.G" Comment="" dx1="425.0"/>
+				<Connection Source="SUBSCRIBE_14.RD_1" Destination="AtTrans1.G" Comment="" dx1="356.25"/>
+				<Connection Source="Start.RD_1" Destination="W_SWITCH_1.G" Comment=""/>
+				<Connection Source="SUBSCRIBE_16.RD_1" Destination="AtEntry2.G" Comment="" dx1="356.25"/>
+				<Connection Source="Conveyor2.Q" Destination="CLIENT_1_1.SD_1" Comment="" dx1="831.25"/>
+				<Connection Source="load2.Q" Destination="CLIENT_1_2.SD_1" Comment="" dx1="793.75"/>
+				<Connection Source="TransLeft2.Q" Destination="CLIENT_1_3.SD_1" Comment="" dx1="700.0"/>
+				<Connection Source="TransLeft1.Q" Destination="CLIENT_1_4.SD_1" Comment="" dx1="700.0"/>
+				<Connection Source="Load1.Q" Destination="CLIENT_1_5.SD_1" Comment="" dx1="668.75"/>
+			</DataConnections>
+		</SubAppNetwork>
+	</Application>
+	<Device Name="FORTE_PC" Type="FORTE_PC" Comment="" x="2250.0" y="1500.0">
+		<Parameter Name="MGR_ID" Value="&quot;35.228.36.148:61499&quot;"/>
+		<Attribute Name="Profile" Type="STRING" Value="HOLOBLOC" Comment="device profile"/>
+		<Attribute Name="Color" Type="STRING" Value="255,190,111" Comment="color"/>
+		<Resource Name="EMB_RES" Type="EMB_RES" Comment="" x="0.0" y="0.0">
+			<FBNetwork>
+				<FB Name="E_DELAY" Type="E_DELAY" Comment="" x="1750.0" y="500.0">
+					<Parameter Name="DT" Value="T#3s"/>
+				</FB>
+				<FB Name="E_SWITCH_1" Type="E_SWITCH" Comment="" x="9750.0" y="625.0">
+				</FB>
+				<FB Name="E_SWITCH_2" Type="E_SWITCH" Comment="" x="9750.0" y="1750.0">
+				</FB>
+				<FB Name="SUBSCRIBE_2" Type="SUBSCRIBE_1" Comment="" x="8500.0" y="375.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:AtExit]"/>
+				</FB>
+				<FB Name="SUBSCRIBE_3" Type="SUBSCRIBE_1" Comment="" x="8500.0" y="1750.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:Start]"/>
+				</FB>
+				<FB Name="E_SWITCH_7" Type="E_SWITCH" Comment="" x="13812.5" y="1762.5">
+				</FB>
+				<FB Name="E_SWITCH_6" Type="E_SWITCH" Comment="" x="13812.5" y="412.5">
+				</FB>
+				<FB Name="SUBSCRIBE_4" Type="SUBSCRIBE_1" Comment="" x="8500.0" y="3125.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:AtEntry2]"/>
+				</FB>
+				<FB Name="SUBSCRIBE_12" Type="SUBSCRIBE_1" Comment="" x="12212.5" y="6087.5">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:Load1]"/>
+				</FB>
+				<FB Name="E_SWITCH_3" Type="E_SWITCH" Comment="" x="10125.0" y="3125.0">
+				</FB>
+				<FB Name="SUBSCRIBE_8" Type="SUBSCRIBE_1" Comment="" x="12212.5" y="1687.5">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:Conveyor2]"/>
+				</FB>
+				<FB Name="E_SWITCH_11" Type="E_SWITCH" Comment="" x="13837.5" y="6162.5">
+				</FB>
+				<FB Name="SUBSCRIBE_6" Type="SUBSCRIBE_1" Comment="" x="8500.0" y="5500.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:AtTrans1]"/>
+				</FB>
+				<FB Name="E_SWITCH_5" Type="E_SWITCH" Comment="" x="10087.5" y="5675.0">
+				</FB>
+				<FB Name="E_SWITCH_4" Type="E_SWITCH" Comment="" x="10312.5" y="4450.0">
+				</FB>
+				<FB Name="SUBSCRIBE_7" Type="SUBSCRIBE_1" Comment="" x="11987.5" y="287.5">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:ExitConv]"/>
+				</FB>
+				<FB Name="SUBSCRIBE_9" Type="SUBSCRIBE_1" Comment="" x="11987.5" y="2837.5">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:Load2]"/>
+				</FB>
+				<FB Name="SUBSCRIBE_10" Type="SUBSCRIBE_1" Comment="" x="12150.0" y="4000.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:TransLeft2]"/>
+				</FB>
+				<FB Name="E_SWITCH_10" Type="E_SWITCH" Comment="" x="13925.0" y="5037.5">
+				</FB>
+				<FB Name="SUBSCRIBE_5" Type="SUBSCRIBE_1" Comment="" x="8500.0" y="4250.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:AtTrans2]"/>
+				</FB>
+				<FB Name="SUBSCRIBE_11" Type="SUBSCRIBE_1" Comment="" x="12200.0" y="4987.5">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:TransLeft1]"/>
+				</FB>
+				<FB Name="E_SWITCH_9" Type="E_SWITCH" Comment="" x="13837.5" y="4100.0">
+				</FB>
+				<FB Name="E_SWITCH_8" Type="E_SWITCH" Comment="" x="13675.0" y="2862.5">
+				</FB>
+				<EventConnections>
+					<Connection Source="START.COLD" Destination="E_DELAY.START" Comment="" dx1="543.75"/>
+					<Connection Source="START.WARM" Destination="E_DELAY.START" Comment="" dx1="543.75"/>
+					<Connection Source="E_DELAY.EO" Destination="SUBSCRIBE_2.RSP" Comment="" dx1="3137.5"/>
+					<Connection Source="E_DELAY.EO" Destination="SUBSCRIBE_3.RSP" Comment="" dx1="3137.5"/>
+					<Connection Source="SUBSCRIBE_3.IND" Destination="E_SWITCH_2.EI" Comment="" dx1="293.75"/>
+					<Connection Source="SUBSCRIBE_2.IND" Destination="E_SWITCH_1.EI" Comment="" dx1="293.75"/>
+					<Connection Source="START.COLD" Destination="SUBSCRIBE_2.INIT" Comment="" dx1="3918.75"/>
+					<Connection Source="START.WARM" Destination="SUBSCRIBE_2.INIT" Comment="" dx1="3918.75"/>
+					<Connection Source="START.COLD" Destination="SUBSCRIBE_3.INIT" Comment="" dx1="3918.75"/>
+					<Connection Source="START.WARM" Destination="SUBSCRIBE_3.INIT" Comment="" dx1="3918.75"/>
+					<Connection Source="E_DELAY.EO" Destination="SUBSCRIBE_4.RSP" Comment="" dx1="3137.5"/>
+					<Connection Source="E_DELAY.EO" Destination="SUBSCRIBE_12.RSP" Comment="" dx1="4993.75"/>
+					<Connection Source="SUBSCRIBE_4.IND" Destination="E_SWITCH_3.EI" Comment="" dx1="481.25"/>
+					<Connection Source="E_DELAY.EO" Destination="SUBSCRIBE_8.RSP" Comment="" dx1="4993.75"/>
+					<Connection Source="SUBSCRIBE_8.IND" Destination="E_SWITCH_7.EI" Comment="" dx1="468.75"/>
+					<Connection Source="SUBSCRIBE_12.IND" Destination="E_SWITCH_11.EI" Comment="" dx1="475.0"/>
+					<Connection Source="E_DELAY.EO" Destination="SUBSCRIBE_6.RSP" Comment="" dx1="3137.5"/>
+					<Connection Source="SUBSCRIBE_6.IND" Destination="E_SWITCH_5.EI" Comment="" dx1="462.5"/>
+					<Connection Source="E_DELAY.EO" Destination="SUBSCRIBE_7.RSP" Comment="" dx1="4881.25"/>
+					<Connection Source="SUBSCRIBE_7.IND" Destination="E_SWITCH_6.EI" Comment="" dx1="581.25"/>
+					<Connection Source="E_DELAY.EO" Destination="SUBSCRIBE_9.RSP" Comment="" dx1="4881.25"/>
+					<Connection Source="E_DELAY.EO" Destination="SUBSCRIBE_10.RSP" Comment="" dx1="4962.5"/>
+					<Connection Source="E_DELAY.EO" Destination="SUBSCRIBE_5.RSP" Comment="" dx1="3137.5"/>
+					<Connection Source="SUBSCRIBE_5.IND" Destination="E_SWITCH_4.EI" Comment="" dx1="575.0"/>
+					<Connection Source="E_DELAY.EO" Destination="SUBSCRIBE_11.RSP" Comment="" dx1="4987.5"/>
+					<Connection Source="SUBSCRIBE_11.IND" Destination="E_SWITCH_10.EI" Comment="" dx1="531.25"/>
+					<Connection Source="SUBSCRIBE_10.IND" Destination="E_SWITCH_9.EI" Comment=""/>
+					<Connection Source="SUBSCRIBE_9.IND" Destination="E_SWITCH_8.EI" Comment="" dx1="512.5"/>
+					<Connection Source="START.COLD" Destination="SUBSCRIBE_4.INIT" Comment="" dx1="3918.75"/>
+					<Connection Source="START.WARM" Destination="SUBSCRIBE_4.INIT" Comment="" dx1="3918.75"/>
+					<Connection Source="START.COLD" Destination="SUBSCRIBE_5.INIT" Comment="" dx1="3918.75"/>
+					<Connection Source="START.WARM" Destination="SUBSCRIBE_5.INIT" Comment="" dx1="3918.75"/>
+					<Connection Source="START.COLD" Destination="SUBSCRIBE_6.INIT" Comment="" dx1="3918.75"/>
+					<Connection Source="START.WARM" Destination="SUBSCRIBE_6.INIT" Comment="" dx1="3918.75"/>
+					<Connection Source="START.COLD" Destination="SUBSCRIBE_7.INIT" Comment="" dx1="5662.5"/>
+					<Connection Source="START.WARM" Destination="SUBSCRIBE_7.INIT" Comment="" dx1="5662.5"/>
+					<Connection Source="START.COLD" Destination="SUBSCRIBE_8.INIT" Comment="" dx1="5775.0"/>
+					<Connection Source="START.WARM" Destination="SUBSCRIBE_8.INIT" Comment="" dx1="5775.0"/>
+					<Connection Source="START.COLD" Destination="SUBSCRIBE_9.INIT" Comment="" dx1="5662.5"/>
+					<Connection Source="START.WARM" Destination="SUBSCRIBE_9.INIT" Comment="" dx1="5662.5"/>
+					<Connection Source="START.COLD" Destination="SUBSCRIBE_10.INIT" Comment="" dx1="5743.75"/>
+					<Connection Source="START.WARM" Destination="SUBSCRIBE_10.INIT" Comment="" dx1="5743.75"/>
+					<Connection Source="START.COLD" Destination="SUBSCRIBE_11.INIT" Comment="" dx1="5768.75"/>
+					<Connection Source="START.WARM" Destination="SUBSCRIBE_11.INIT" Comment="" dx1="5768.75"/>
+					<Connection Source="START.COLD" Destination="SUBSCRIBE_12.INIT" Comment="" dx1="5775.0"/>
+					<Connection Source="START.WARM" Destination="SUBSCRIBE_12.INIT" Comment="" dx1="5775.0"/>
+				</EventConnections>
+				<DataConnections>
+					<Connection Source="SUBSCRIBE_2.RD_1" Destination="E_SWITCH_1.G" Comment="" dx1="293.75"/>
+					<Connection Source="SUBSCRIBE_3.RD_1" Destination="E_SWITCH_2.G" Comment="" dx1="293.75"/>
+					<Connection Source="SUBSCRIBE_4.RD_1" Destination="E_SWITCH_3.G" Comment="" dx1="481.25"/>
+					<Connection Source="SUBSCRIBE_8.RD_1" Destination="E_SWITCH_7.G" Comment="" dx1="468.75"/>
+					<Connection Source="SUBSCRIBE_12.RD_1" Destination="E_SWITCH_11.G" Comment="" dx1="475.0"/>
+					<Connection Source="SUBSCRIBE_6.RD_1" Destination="E_SWITCH_5.G" Comment="" dx1="462.5"/>
+					<Connection Source="SUBSCRIBE_7.RD_1" Destination="E_SWITCH_6.G" Comment="" dx1="581.25"/>
+					<Connection Source="SUBSCRIBE_5.RD_1" Destination="E_SWITCH_4.G" Comment=""/>
+					<Connection Source="SUBSCRIBE_11.RD_1" Destination="E_SWITCH_10.G" Comment="" dx1="531.25"/>
+					<Connection Source="SUBSCRIBE_10.RD_1" Destination="E_SWITCH_9.G" Comment="" dx1="506.25"/>
+					<Connection Source="SUBSCRIBE_9.RD_1" Destination="E_SWITCH_8.G" Comment="" dx1="512.5"/>
+				</DataConnections>
+			</FBNetwork>
+		</Resource>
+	</Device>
+	<Device Name="FORTE_PC_1" Type="FORTE_PC" Comment="" x="4750.0" y="1500.0">
+		<Parameter Name="MGR_ID" Value="&quot;35.228.36.148:61500&quot;"/>
+		<Attribute Name="Profile" Type="STRING" Value="HOLOBLOC" Comment="device profile"/>
+		<Attribute Name="Color" Type="STRING" Value="127,88,192" Comment="color"/>
+		<Resource Name="EMB_RES" Type="EMB_RES" Comment="" x="0.0" y="0.0">
+			<FBNetwork>
+				<FB Name="E_SR" Type="E_SR" Comment="" x="4500.0" y="625.0">
+				</FB>
+				<FB Name="AtExit" Type="SUBSCRIBE_1" Comment="" x="1625.0" y="500.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://35.228.36.148:4840#;/Objects/1:AtExit]"/>
+				</FB>
+				<FB Name="E_SWITCH" Type="E_SWITCH" Comment="" x="3250.0" y="625.0">
+				</FB>
+				<FB Name="ExitConv" Type="CLIENT_1_0" Comment="" x="5500.0" y="375.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[WRITE;opc.tcp://35.228.36.148:4840#;/Objects/1:ExitConv]"/>
+				</FB>
+				<FB Name="SUBSCRIBE_16" Type="SUBSCRIBE_1" Comment="" x="1625.0" y="2000.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://35.228.36.148:4840#;/Objects/1:AtEntry2]"/>
+				</FB>
+				<FB Name="AtEntry2" Type="E_SWITCH" Comment="" x="3306.25" y="2100.0">
+				</FB>
+				<FB Name="CLIENT_1_5" Type="CLIENT_1_0" Comment="" x="6831.25" y="4975.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[WRITE;opc.tcp://35.228.36.148:4840#;/Objects/1:Load1]"/>
+				</FB>
+				<FB Name="TransLeft1" Type="E_SR" Comment="" x="4912.5" y="4043.75">
+				</FB>
+				<FB Name="Load1" Type="E_SR" Comment="" x="4912.5" y="5018.75">
+				</FB>
+				<FB Name="AtEntry2_1" Type="E_SWITCH" Comment="" x="3306.25" y="3068.75">
+				</FB>
+				<FB Name="CLIENT_1_2" Type="CLIENT_1_0" Comment="" x="6750.0" y="1875.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[WRITE;opc.tcp://35.228.36.148:4840#;/Objects/1:Load2]"/>
+				</FB>
+				<FB Name="TransLeft2" Type="E_SR" Comment="" x="4912.5" y="3168.75">
+				</FB>
+				<FB Name="AtTrans2" Type="E_SWITCH" Comment="" x="3306.25" y="3843.75">
+				</FB>
+				<FB Name="SUBSCRIBE_14" Type="SUBSCRIBE_1" Comment="" x="1625.0" y="4518.75">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://35.228.36.148:4840#;/Objects/1:AtTrans1]"/>
+				</FB>
+				<FB Name="CLIENT_1_4" Type="CLIENT_1_0" Comment="" x="6831.25" y="3975.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[WRITE;opc.tcp://35.228.36.148:4840#;/Objects/1:TransLeft1]"/>
+				</FB>
+				<FB Name="SUBSCRIBE_15" Type="SUBSCRIBE_1" Comment="" x="1625.0" y="3543.75">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://35.228.36.148:4840#;/Objects/1:AtTrans2]"/>
+				</FB>
+				<FB Name="AtTrans1" Type="E_SWITCH" Comment="" x="3306.25" y="4618.75">
+				</FB>
+				<FB Name="CLIENT_1_3" Type="CLIENT_1_0" Comment="" x="6706.25" y="3100.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[WRITE;opc.tcp://35.228.36.148:4840#;/Objects/1:TransLeft2]"/>
+				</FB>
+				<FB Name="load2" Type="E_SR" Comment="" x="4912.5" y="2200.0">
+				</FB>
+				<EventConnections>
+					<Connection Source="AtExit.IND" Destination="E_SWITCH.EI" Comment="" dx1="418.75"/>
+					<Connection Source="E_SWITCH.EO1" Destination="E_SR.S" Comment="" dx1="300.0"/>
+					<Connection Source="AtExit.INITO" Destination="ExitConv.INIT" Comment="" dx1="1606.25"/>
+					<Connection Source="E_SR.EO" Destination="ExitConv.REQ" Comment="" dx1="456.25"/>
+					<Connection Source="START.COLD" Destination="AtExit.INIT" Comment="" dx1="475.0"/>
+					<Connection Source="START.WARM" Destination="AtExit.INIT" Comment="" dx1="475.0"/>
+					<Connection Source="SUBSCRIBE_16.IND" Destination="AtEntry2.EI" Comment=""/>
+					<Connection Source="Load1.EO" Destination="CLIENT_1_5.REQ" Comment="" dx1="793.75"/>
+					<Connection Source="AtEntry2_1.EO1" Destination="TransLeft1.S" Comment="" dx1="575.0"/>
+					<Connection Source="AtEntry2_1.EO1" Destination="TransLeft2.S" Comment=""/>
+					<Connection Source="TransLeft1.EO" Destination="CLIENT_1_4.REQ" Comment="" dx1="762.5"/>
+					<Connection Source="SUBSCRIBE_15.IND" Destination="AtEntry2_1.EI" Comment="" dx1="506.25"/>
+					<Connection Source="SUBSCRIBE_15.IND" Destination="AtTrans2.EI" Comment="" dx1="506.25"/>
+					<Connection Source="SUBSCRIBE_14.IND" Destination="AtTrans1.EI" Comment=""/>
+					<Connection Source="AtTrans1.EO1" Destination="TransLeft2.R" Comment="" dx1="575.0"/>
+					<Connection Source="AtTrans1.EO1" Destination="TransLeft1.R" Comment="" dx1="575.0"/>
+					<Connection Source="AtTrans1.EO1" Destination="Load1.S" Comment="" dx1="543.75"/>
+					<Connection Source="TransLeft2.EO" Destination="CLIENT_1_3.REQ" Comment="" dx1="700.0"/>
+					<Connection Source="AtEntry2.EO1" Destination="load2.S" Comment=""/>
+					<Connection Source="AtTrans2.EO1" Destination="load2.R" Comment="" dx1="543.75"/>
+					<Connection Source="load2.EO" Destination="CLIENT_1_2.REQ" Comment="" dx1="756.25"/>
+					<Connection Source="START.COLD" Destination="SUBSCRIBE_16.INIT" Comment="" dx1="481.25"/>
+					<Connection Source="START.WARM" Destination="SUBSCRIBE_16.INIT" Comment="" dx1="481.25"/>
+					<Connection Source="START.COLD" Destination="SUBSCRIBE_15.INIT" Comment="" dx1="481.25"/>
+					<Connection Source="START.WARM" Destination="SUBSCRIBE_15.INIT" Comment="" dx1="481.25"/>
+					<Connection Source="START.COLD" Destination="SUBSCRIBE_14.INIT" Comment="" dx1="481.25"/>
+					<Connection Source="START.WARM" Destination="SUBSCRIBE_14.INIT" Comment="" dx1="481.25"/>
+					<Connection Source="SUBSCRIBE_16.INITO" Destination="CLIENT_1_2.INIT" Comment="" dx1="2231.25"/>
+					<Connection Source="SUBSCRIBE_15.INITO" Destination="CLIENT_1_3.INIT" Comment="" dx1="2206.25"/>
+					<Connection Source="SUBSCRIBE_15.INITO" Destination="CLIENT_1_4.INIT" Comment="" dx1="2268.75"/>
+					<Connection Source="SUBSCRIBE_14.INITO" Destination="CLIENT_1_5.INIT" Comment="" dx1="2268.75"/>
+				</EventConnections>
+				<DataConnections>
+					<Connection Source="AtExit.RD_1" Destination="E_SWITCH.G" Comment="" dx1="418.75"/>
+					<Connection Source="E_SR.Q" Destination="ExitConv.SD_1" Comment="" dx1="456.25"/>
+					<Connection Source="SUBSCRIBE_16.RD_1" Destination="AtEntry2.G" Comment="" dx1="506.25"/>
+					<Connection Source="Load1.Q" Destination="CLIENT_1_5.SD_1" Comment="" dx1="793.75"/>
+					<Connection Source="TransLeft1.Q" Destination="CLIENT_1_4.SD_1" Comment="" dx1="762.5"/>
+					<Connection Source="SUBSCRIBE_15.RD_1" Destination="AtTrans2.G" Comment="" dx1="506.25"/>
+					<Connection Source="SUBSCRIBE_15.RD_1" Destination="AtEntry2_1.G" Comment="" dx1="506.25"/>
+					<Connection Source="SUBSCRIBE_14.RD_1" Destination="AtTrans1.G" Comment="" dx1="506.25"/>
+					<Connection Source="TransLeft2.Q" Destination="CLIENT_1_3.SD_1" Comment="" dx1="700.0"/>
+					<Connection Source="load2.Q" Destination="CLIENT_1_2.SD_1" Comment="" dx1="793.75"/>
+				</DataConnections>
+			</FBNetwork>
+		</Resource>
+	</Device>
+	<Device Name="FORTE_PC_2" Type="FORTE_PC" Comment="" x="7000.0" y="1375.0">
+		<Parameter Name="MGR_ID" Value="&quot;35.228.36.148:61501&quot;"/>
+		<Attribute Name="Profile" Type="STRING" Value="HOLOBLOC" Comment="device profile"/>
+		<Attribute Name="Color" Type="STRING" Value="124,197,130" Comment="color"/>
+		<Resource Name="EMB_RES" Type="EMB_RES" Comment="" x="0.0" y="0.0">
+			<FBNetwork>
+				<FB Name="CLIENT_1_1" Type="CLIENT_1_0" Comment="" x="5250.0" y="2000.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[WRITE;opc.tcp://35.228.36.148:4840#;/Objects/1:Conveyor2]"/>
+				</FB>
+				<FB Name="Conveyor2" Type="E_SR" Comment="" x="3218.75" y="2050.0">
+				</FB>
+				<FB Name="W_SWITCH_1" Type="E_SWITCH" Comment="" x="1812.5" y="1950.0">
+					<Parameter Name="G" Value="Start"/>
+				</FB>
+				<FB Name="Start" Type="SUBSCRIBE_1" Comment="" x="500.0" y="1750.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://35.228.36.148:4840#;/Objects/1:Start]"/>
+				</FB>
+				<EventConnections>
+					<Connection Source="Conveyor2.EO" Destination="CLIENT_1_1.REQ" Comment="" dx1="825.0"/>
+					<Connection Source="W_SWITCH_1.EO0" Destination="Conveyor2.R" Comment="" dx1="462.5"/>
+					<Connection Source="W_SWITCH_1.EO1" Destination="Conveyor2.S" Comment=""/>
+					<Connection Source="Start.IND" Destination="W_SWITCH_1.EI" Comment="" dx1="575.0"/>
+					<Connection Source="Start.INITO" Destination="CLIENT_1_1.INIT" Comment="" dx1="2293.75"/>
+					<Connection Source="START.COLD" Destination="Start.INIT" Comment="" dx1="75.0" dx2="75.0" dy="875.0"/>
+					<Connection Source="START.WARM" Destination="Start.INIT" Comment="" dx1="75.0" dx2="75.0" dy="825.0"/>
+				</EventConnections>
+				<DataConnections>
+					<Connection Source="Conveyor2.Q" Destination="CLIENT_1_1.SD_1" Comment="" dx1="825.0"/>
+					<Connection Source="Start.RD_1" Destination="W_SWITCH_1.G" Comment=""/>
+				</DataConnections>
+			</FBNetwork>
+		</Resource>
+	</Device>
+	<Mapping From="FactIOControlAppApp.E_DELAY" To="FORTE_PC.EMB_RES.E_DELAY"/>
+	<Mapping From="FactIOControlAppApp.E_SWITCH_1" To="FORTE_PC.EMB_RES.E_SWITCH_1"/>
+	<Mapping From="FactIOControlAppApp.E_SR" To="FORTE_PC_1.EMB_RES.E_SR"/>
+	<Mapping From="FactIOControlAppApp.AtExit" To="FORTE_PC_1.EMB_RES.AtExit"/>
+	<Mapping From="FactIOControlAppApp.E_SWITCH" To="FORTE_PC_1.EMB_RES.E_SWITCH"/>
+	<Mapping From="FactIOControlAppApp.ExitConv" To="FORTE_PC_1.EMB_RES.ExitConv"/>
+	<Mapping From="FactIOControlAppApp.E_SWITCH_2" To="FORTE_PC.EMB_RES.E_SWITCH_2"/>
+	<Mapping From="FactIOControlAppApp.SUBSCRIBE_2" To="FORTE_PC.EMB_RES.SUBSCRIBE_2"/>
+	<Mapping From="FactIOControlAppApp.SUBSCRIBE_3" To="FORTE_PC.EMB_RES.SUBSCRIBE_3"/>
+	<Mapping From="FactIOControlAppApp.E_SWITCH_7" To="FORTE_PC.EMB_RES.E_SWITCH_7"/>
+	<Mapping From="FactIOControlAppApp.E_SWITCH_6" To="FORTE_PC.EMB_RES.E_SWITCH_6"/>
+	<Mapping From="FactIOControlAppApp.SUBSCRIBE_4" To="FORTE_PC.EMB_RES.SUBSCRIBE_4"/>
+	<Mapping From="FactIOControlAppApp.SUBSCRIBE_12" To="FORTE_PC.EMB_RES.SUBSCRIBE_12"/>
+	<Mapping From="FactIOControlAppApp.E_SWITCH_3" To="FORTE_PC.EMB_RES.E_SWITCH_3"/>
+	<Mapping From="FactIOControlAppApp.SUBSCRIBE_8" To="FORTE_PC.EMB_RES.SUBSCRIBE_8"/>
+	<Mapping From="FactIOControlAppApp.E_SWITCH_11" To="FORTE_PC.EMB_RES.E_SWITCH_11"/>
+	<Mapping From="FactIOControlAppApp.SUBSCRIBE_6" To="FORTE_PC.EMB_RES.SUBSCRIBE_6"/>
+	<Mapping From="FactIOControlAppApp.E_SWITCH_5" To="FORTE_PC.EMB_RES.E_SWITCH_5"/>
+	<Mapping From="FactIOControlAppApp.E_SWITCH_4" To="FORTE_PC.EMB_RES.E_SWITCH_4"/>
+	<Mapping From="FactIOControlAppApp.SUBSCRIBE_7" To="FORTE_PC.EMB_RES.SUBSCRIBE_7"/>
+	<Mapping From="FactIOControlAppApp.SUBSCRIBE_9" To="FORTE_PC.EMB_RES.SUBSCRIBE_9"/>
+	<Mapping From="FactIOControlAppApp.SUBSCRIBE_10" To="FORTE_PC.EMB_RES.SUBSCRIBE_10"/>
+	<Mapping From="FactIOControlAppApp.E_SWITCH_10" To="FORTE_PC.EMB_RES.E_SWITCH_10"/>
+	<Mapping From="FactIOControlAppApp.SUBSCRIBE_5" To="FORTE_PC.EMB_RES.SUBSCRIBE_5"/>
+	<Mapping From="FactIOControlAppApp.SUBSCRIBE_11" To="FORTE_PC.EMB_RES.SUBSCRIBE_11"/>
+	<Mapping From="FactIOControlAppApp.E_SWITCH_9" To="FORTE_PC.EMB_RES.E_SWITCH_9"/>
+	<Mapping From="FactIOControlAppApp.E_SWITCH_8" To="FORTE_PC.EMB_RES.E_SWITCH_8"/>
+	<Mapping From="FactIOControlAppApp.CLIENT_1_1" To="FORTE_PC_2.EMB_RES.CLIENT_1_1"/>
+	<Mapping From="FactIOControlAppApp.Conveyor2" To="FORTE_PC_2.EMB_RES.Conveyor2"/>
+	<Mapping From="FactIOControlAppApp.W_SWITCH_1" To="FORTE_PC_2.EMB_RES.W_SWITCH_1"/>
+	<Mapping From="FactIOControlAppApp.Start" To="FORTE_PC_2.EMB_RES.Start"/>
+	<Mapping From="FactIOControlAppApp.SUBSCRIBE_16" To="FORTE_PC_1.EMB_RES.SUBSCRIBE_16"/>
+	<Mapping From="FactIOControlAppApp.AtEntry2" To="FORTE_PC_1.EMB_RES.AtEntry2"/>
+	<Mapping From="FactIOControlAppApp.CLIENT_1_5" To="FORTE_PC_1.EMB_RES.CLIENT_1_5"/>
+	<Mapping From="FactIOControlAppApp.TransLeft1" To="FORTE_PC_1.EMB_RES.TransLeft1"/>
+	<Mapping From="FactIOControlAppApp.Load1" To="FORTE_PC_1.EMB_RES.Load1"/>
+	<Mapping From="FactIOControlAppApp.AtEntry2_1" To="FORTE_PC_1.EMB_RES.AtEntry2_1"/>
+	<Mapping From="FactIOControlAppApp.CLIENT_1_2" To="FORTE_PC_1.EMB_RES.CLIENT_1_2"/>
+	<Mapping From="FactIOControlAppApp.TransLeft2" To="FORTE_PC_1.EMB_RES.TransLeft2"/>
+	<Mapping From="FactIOControlAppApp.AtTrans2" To="FORTE_PC_1.EMB_RES.AtTrans2"/>
+	<Mapping From="FactIOControlAppApp.SUBSCRIBE_14" To="FORTE_PC_1.EMB_RES.SUBSCRIBE_14"/>
+	<Mapping From="FactIOControlAppApp.CLIENT_1_4" To="FORTE_PC_1.EMB_RES.CLIENT_1_4"/>
+	<Mapping From="FactIOControlAppApp.SUBSCRIBE_15" To="FORTE_PC_1.EMB_RES.SUBSCRIBE_15"/>
+	<Mapping From="FactIOControlAppApp.AtTrans1" To="FORTE_PC_1.EMB_RES.AtTrans1"/>
+	<Mapping From="FactIOControlAppApp.CLIENT_1_3" To="FORTE_PC_1.EMB_RES.CLIENT_1_3"/>
+	<Mapping From="FactIOControlAppApp.load2" To="FORTE_PC_1.EMB_RES.load2"/>
+	<Segment Name="Ethernet" Type="Ethernet" Comment="" x="4100.0" y="406.25" dx1="1875.0">
+		<Attribute Name="Color" Type="STRING" Value="202,173,114" Comment="color"/>
+	</Segment>
+	<Link SegmentName="Ethernet" CommResource="FORTE_PC" Comment="">
+	</Link>
+	<Link SegmentName="Ethernet" CommResource="FORTE_PC_1" Comment="">
+	</Link>
+	<Link SegmentName="Ethernet" CommResource="FORTE_PC_2" Comment="">
+	</Link>
+</System>
