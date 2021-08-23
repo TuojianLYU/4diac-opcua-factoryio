@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FBType Name="Load2Check" Comment="Template for a Basic Function Block Type">
+	<Identification Standard="61499-2">
+	</Identification>
+	<VersionInfo Version="1.0" Author="Tuojian Lyu" Date="2021-07-28">
+	</VersionInfo>
+	<InterfaceList>
+		<EventInputs>
+			<Event Name="INIT" Type="Event" Comment="Initialization Request">
+				<With Var="AtEntry2"/>
+			</Event>
+			<Event Name="REQ" Type="Event" Comment="Normal Execution Request">
+				<With Var="AtEntry2"/>
+				<With Var="TransLeft2"/>
+			</Event>
+		</EventInputs>
+		<EventOutputs>
+			<Event Name="INITO" Type="Event" Comment="Initialization Confirm">
+				<With Var="QO"/>
+			</Event>
+			<Event Name="CNF" Type="Event" Comment="Execution Confirmation">
+				<With Var="QO"/>
+			</Event>
+		</EventOutputs>
+		<InputVars>
+			<VarDeclaration Name="AtEntry2" Type="BOOL" Comment="Input event qualifier"/>
+			<VarDeclaration Name="TransLeft2" Type="BOOL" Comment=""/>
+		</InputVars>
+		<OutputVars>
+			<VarDeclaration Name="QO" Type="BOOL" Comment="Output event qualifier"/>
+		</OutputVars>
+	</InterfaceList>
+	<BasicFB>
+		<ECC>
+			<ECState Name="START" Comment="Initial State" x="473.33333333333337" y="1120.0">
+			</ECState>
+			<ECState Name="Work" Comment="" x="2213.3333333333335" y="1053.3333333333335">
+				<ECAction Algorithm="update" Output="CNF"/>
+			</ECState>
+			<ECTransition Source="START" Destination="Work" Condition="REQ" Comment="" x="1466.6666666666667" y="900.0"/>
+			<ECTransition Source="Work" Destination="START" Condition="1" Comment="" x="1506.6666666666667" y="1393.3333333333335"/>
+		</ECC>
+		<Algorithm Name="update" Comment="">
+			<ST><![CDATA[IF (TRUE = AtEntry2) AND (NOT TransLeft2) THEN
+QO := TRUE;
+ELSE
+QO := FALSE;
+END_IF;]]></ST>
+		</Algorithm>
+	</BasicFB>
+</FBType>

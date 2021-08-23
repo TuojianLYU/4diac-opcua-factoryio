@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FBType Name="Conveyor1Check" Comment="Template for a Basic Function Block Type">
+	<Identification Standard="61499-2">
+	</Identification>
+	<VersionInfo Version="1.0" Author="Tuojian Lyu" Date="2021-07-29">
+	</VersionInfo>
+	<InterfaceList>
+		<EventInputs>
+			<Event Name="INIT" Type="Event" Comment="Initialization Request">
+				<With Var="AtEntry1"/>
+			</Event>
+			<Event Name="REQ" Type="Event" Comment="Normal Execution Request">
+				<With Var="AtEntry1"/>
+				<With Var="Load1"/>
+				<With Var="TransLeft"/>
+			</Event>
+		</EventInputs>
+		<EventOutputs>
+			<Event Name="INITO" Type="Event" Comment="Initialization Confirm">
+				<With Var="QO"/>
+			</Event>
+			<Event Name="CNF" Type="Event" Comment="Execution Confirmation">
+				<With Var="QO"/>
+			</Event>
+		</EventOutputs>
+		<InputVars>
+			<VarDeclaration Name="AtEntry1" Type="BOOL" Comment="Input event qualifier"/>
+			<VarDeclaration Name="Load1" Type="BOOL" Comment=""/>
+			<VarDeclaration Name="TransLeft" Type="BOOL" Comment=""/>
+		</InputVars>
+		<OutputVars>
+			<VarDeclaration Name="QO" Type="BOOL" Comment="Output event qualifier"/>
+		</OutputVars>
+	</InterfaceList>
+	<BasicFB>
+		<ECC>
+			<ECState Name="START" Comment="Initial State" x="473.33333333333337" y="1120.0">
+			</ECState>
+			<ECState Name="InitState" Comment="" x="1853.3333333333335" y="1080.0">
+				<ECAction Algorithm="Init" Output="INITO"/>
+			</ECState>
+			<ECState Name="Work" Comment="" x="2000.0" y="2533.3333333333335">
+				<ECAction Algorithm="ALG1" Output="CNF"/>
+			</ECState>
+			<ECTransition Source="START" Destination="InitState" Condition="INIT" Comment="" x="1413.3333333333335" y="846.6666666666667"/>
+			<ECTransition Source="InitState" Destination="START" Condition="1" Comment="" x="1326.6666666666667" y="1213.3333333333335"/>
+			<ECTransition Source="START" Destination="Work" Condition="REQ" Comment="" x="2226.666666666667" y="1806.6666666666667"/>
+			<ECTransition Source="Work" Destination="START" Condition="1" Comment="" x="1366.6666666666667" y="1900.0"/>
+		</ECC>
+		<Algorithm Name="Init" Comment="">
+			<ST><![CDATA[QO := TRUE;]]></ST>
+		</Algorithm>
+		<Algorithm Name="ALG1" Comment="">
+			<ST><![CDATA[IF (TRUE = TransLeft) THEN
+QO := FALSE;
+ELSE
+QO := TRUE;
+END_IF;]]></ST>
+		</Algorithm>
+	</BasicFB>
+</FBType>

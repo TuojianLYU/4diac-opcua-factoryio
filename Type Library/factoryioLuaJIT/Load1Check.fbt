@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FBType Name="Load1Check" Comment="Template for a Basic Function Block Type">
+	<Identification Standard="61499-2">
+	</Identification>
+	<VersionInfo Version="1.0" Author="Tuojian Lyu" Date="2021-07-29">
+	</VersionInfo>
+	<InterfaceList>
+		<EventInputs>
+			<Event Name="INIT" Type="Event" Comment="Initialization Request">
+				<With Var="AtTrans1"/>
+			</Event>
+			<Event Name="REQ" Type="Event" Comment="Normal Execution Request">
+				<With Var="AtTrans1"/>
+				<With Var="AtEntry1"/>
+				<With Var="TransLeft"/>
+			</Event>
+		</EventInputs>
+		<EventOutputs>
+			<Event Name="INITO" Type="Event" Comment="Initialization Confirm">
+				<With Var="QO"/>
+			</Event>
+			<Event Name="CNF" Type="Event" Comment="Execution Confirmation">
+				<With Var="QO"/>
+			</Event>
+		</EventOutputs>
+		<InputVars>
+			<VarDeclaration Name="AtTrans1" Type="BOOL" Comment="Input event qualifier"/>
+			<VarDeclaration Name="AtEntry1" Type="BOOL" Comment=""/>
+			<VarDeclaration Name="TransLeft" Type="BOOL" Comment=""/>
+		</InputVars>
+		<OutputVars>
+			<VarDeclaration Name="QO" Type="BOOL" Comment="Output event qualifier"/>
+		</OutputVars>
+	</InterfaceList>
+	<BasicFB>
+		<ECC>
+			<ECState Name="START" Comment="Initial State" x="473.33333333333337" y="1120.0">
+			</ECState>
+			<ECState Name="Work" Comment="" x="1853.3333333333335" y="1113.3333333333335">
+				<ECAction Algorithm="updateAlg" Output="CNF"/>
+			</ECState>
+			<ECTransition Source="START" Destination="Work" Condition="REQ" Comment="" x="1420.0" y="966.6666666666667"/>
+			<ECTransition Source="Work" Destination="START" Condition="1" Comment="" x="1393.3333333333335" y="1386.6666666666667"/>
+		</ECC>
+		<Algorithm Name="updateAlg" Comment="">
+			<ST><![CDATA[IF (TRUE = AtEntry1) AND (FALSE = TransLeft) THEN
+QO := TRUE;
+END_IF;
+
+IF (TRUE = AtTrans1) AND (FALSE = TransLeft) THEN
+QO := TRUE;
+END_IF;
+
+IF (FALSE = AtEntry1) AND (FALSE = AtTrans1) THEN
+QO := FALSE;
+END_IF; 
+]]></ST>
+		</Algorithm>
+	</BasicFB>
+</FBType>

@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<System Name="FactoryioLuaJITDemo" Comment="">
+	<VersionInfo Version="1.0" Author="Tuojian Lyu" Date="2021-07-28">
+	</VersionInfo>
+	<Application Name="VariablesInitApp" Comment="">
+		<SubAppNetwork>
+			<FB Name="TransLeft1_Init" Type="SUBSCRIBE_1" Comment="" x="4086.666666666667" y="400.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:TransLeft1]"/>
+			</FB>
+			<FB Name="Conveyor2_Init" Type="SUBSCRIBE_1" Comment="" x="4086.666666666667" y="1373.3333333333335">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:Conveyor2]"/>
+			</FB>
+			<FB Name="Start_Init" Type="SUBSCRIBE_1" Comment="" x="4086.666666666667" y="2346.666666666667">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:Start]"/>
+			</FB>
+			<FB Name="AtEntry2_Init" Type="SUBSCRIBE_1" Comment="" x="4086.666666666667" y="4293.333333333334">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:AtEntry2]"/>
+			</FB>
+			<FB Name="Load2_Init" Type="SUBSCRIBE_1" Comment="" x="4086.666666666667" y="3320.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:Load2]"/>
+			</FB>
+			<FB Name="Reset_Init" Type="SUBSCRIBE_1" Comment="" x="4086.666666666667" y="6240.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:Reset]"/>
+			</FB>
+			<FB Name="AtTrans1_Init" Type="SUBSCRIBE_1" Comment="" x="4086.666666666667" y="5266.666666666667">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:AtTrans1]"/>
+			</FB>
+			<FB Name="TransLeft2_Init" Type="SUBSCRIBE_1" Comment="" x="4086.666666666667" y="8186.666666666667">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:TransLeft2]"/>
+			</FB>
+			<FB Name="ExitConv_Init" Type="SUBSCRIBE_1" Comment="" x="4086.666666666667" y="7213.333333333334">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:ExitConv]"/>
+			</FB>
+			<FB Name="Load1_Init" Type="SUBSCRIBE_1" Comment="" x="4086.666666666667" y="10133.333333333334">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:Load1]"/>
+			</FB>
+			<FB Name="AtExit_Init" Type="SUBSCRIBE_1" Comment="" x="4086.666666666667" y="9160.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:AtExit]"/>
+			</FB>
+			<FB Name="AtTrans2_Init" Type="SUBSCRIBE_1" Comment="" x="4086.666666666667" y="11106.666666666668">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:AtTrans2]"/>
+			</FB>
+			<FB Name="E_DELAY" Type="E_DELAY" Comment="" x="893.3333333333334" y="5266.666666666667">
+				<Parameter Name="DT" Value="T#3s"/>
+			</FB>
+			<FB Name="Conveyor1_Init" Type="SUBSCRIBE_1" Comment="" x="4133.333333333334" y="12266.666666666668">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:Conveyor1]"/>
+			</FB>
+			<FB Name="AtEntry1_Init" Type="SUBSCRIBE_1" Comment="" x="4133.333333333334" y="13466.666666666668">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:AtEntry1]"/>
+			</FB>
+			<FB Name="NodeInit" Type="NodeInit" Comment="" x="6533.333333333334" y="5066.666666666667">
+			</FB>
+			<EventConnections>
+				<Connection Source="E_DELAY.EO" Destination="TransLeft1_Init.INIT" Comment="" dx1="360.0"/>
+				<Connection Source="E_DELAY.EO" Destination="Conveyor2_Init.INIT" Comment="" dx1="560.0"/>
+				<Connection Source="E_DELAY.EO" Destination="Start_Init.INIT" Comment="" dx1="693.3333333333334"/>
+				<Connection Source="E_DELAY.EO" Destination="Load2_Init.INIT" Comment="" dx1="826.6666666666667"/>
+				<Connection Source="E_DELAY.EO" Destination="AtEntry2_Init.INIT" Comment="" dx1="960.0"/>
+				<Connection Source="E_DELAY.EO" Destination="AtTrans1_Init.INIT" Comment=""/>
+				<Connection Source="E_DELAY.EO" Destination="Reset_Init.INIT" Comment="" dx1="1026.6666666666667"/>
+				<Connection Source="E_DELAY.EO" Destination="ExitConv_Init.INIT" Comment="" dx1="893.3333333333334"/>
+				<Connection Source="E_DELAY.EO" Destination="TransLeft2_Init.INIT" Comment="" dx1="760.0"/>
+				<Connection Source="E_DELAY.EO" Destination="AtExit_Init.INIT" Comment="" dx1="626.6666666666667"/>
+				<Connection Source="E_DELAY.EO" Destination="Load1_Init.INIT" Comment="" dx1="493.33333333333337"/>
+				<Connection Source="E_DELAY.EO" Destination="AtTrans2_Init.INIT" Comment="" dx1="426.6666666666667"/>
+				<Connection Source="E_DELAY.EO" Destination="Conveyor1_Init.INIT" Comment="" dx1="426.6666666666667" dx2="426.6666666666667" dy="0.0"/>
+				<Connection Source="E_DELAY.EO" Destination="AtEntry1_Init.INIT" Comment="" dx1="426.6666666666667" dx2="426.6666666666667" dy="0.0"/>
+			</EventConnections>
+			<DataConnections>
+				<Connection Source="TransLeft1_Init.RD_1" Destination="NodeInit.TransLeft1" Comment="" dx1="800.0"/>
+				<Connection Source="Conveyor2_Init.RD_1" Destination="NodeInit.Conveyor2" Comment="" dx1="800.0"/>
+				<Connection Source="Start_Init.RD_1" Destination="NodeInit.Start" Comment="" dx1="800.0"/>
+				<Connection Source="Load2_Init.RD_1" Destination="NodeInit.Load2" Comment="" dx1="800.0"/>
+				<Connection Source="AtEntry2_Init.RD_1" Destination="NodeInit.AtEntry2" Comment="" dx1="800.0"/>
+				<Connection Source="AtTrans1_Init.RD_1" Destination="NodeInit.AtTrans1" Comment=""/>
+				<Connection Source="Reset_Init.RD_1" Destination="NodeInit.Reset" Comment="" dx1="800.0"/>
+				<Connection Source="ExitConv_Init.RD_1" Destination="NodeInit.ExitConv" Comment="" dx1="800.0"/>
+				<Connection Source="TransLeft2_Init.RD_1" Destination="NodeInit.TransLeft2" Comment="" dx1="800.0"/>
+				<Connection Source="AtExit_Init.RD_1" Destination="NodeInit.AtExit" Comment="" dx1="800.0"/>
+				<Connection Source="Load1_Init.RD_1" Destination="NodeInit.Load1" Comment="" dx1="800.0"/>
+				<Connection Source="AtTrans2_Init.RD_1" Destination="NodeInit.AtTrans2" Comment="" dx1="800.0"/>
+				<Connection Source="Conveyor1_Init.RD_1" Destination="NodeInit.Conveyor1" Comment="" dx1="780.0"/>
+				<Connection Source="AtEntry1_Init.RD_1" Destination="NodeInit.AtEntry1" Comment="" dx1="780.0"/>
+			</DataConnections>
+		</SubAppNetwork>
+	</Application>
+	<Application Name="FactoryioLuaJITDemo" Comment="">
+		<SubAppNetwork>
+			<FB Name="Load1_Actuator" Type="CLIENT_1_0" Comment="" x="7733.333333333334" y="4000.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[WRITE;opc.tcp://localhost:4840#;/Objects/1:Load1]"/>
+			</FB>
+			<FB Name="ExitConv_Acuator" Type="CLIENT_1_0" Comment="" x="7733.333333333334" y="666.6666666666667">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[WRITE;opc.tcp://localhost:4840#;/Objects/1:ExitConv]"/>
+			</FB>
+			<FB Name="Start" Type="SUBSCRIBE_1" Comment="" x="1713.3333333333335" y="1533.3333333333335">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://localhost:4840#;/Objects/1:Start]"/>
+			</FB>
+			<FB Name="AtExit" Type="SUBSCRIBE_1" Comment="" x="1713.3333333333335" y="306.6666666666667">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://localhost:4840#;/Objects/1:AtExit]"/>
+			</FB>
+			<FB Name="TransLeft1_Actuator" Type="CLIENT_1_0" Comment="" x="7733.333333333334" y="8933.333333333334">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[WRITE;opc.tcp://localhost:4840#;/Objects/1:TransLeft1]"/>
+			</FB>
+			<FB Name="TransLeft2_Actuator" Type="CLIENT_1_0" Comment="" x="7733.333333333334" y="7733.333333333334">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[WRITE;opc.tcp://localhost:4840#;/Objects/1:TransLeft2]"/>
+			</FB>
+			<FB Name="AtTrans2" Type="SUBSCRIBE_1" Comment="" x="1733.3333333333335" y="3600.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://localhost:4840#;/Objects/1:AtTrans2]"/>
+			</FB>
+			<FB Name="Conveyor2_Actuator" Type="CLIENT_1_0" Comment="" x="7733.333333333334" y="5200.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[WRITE;opc.tcp://localhost:4840#;/Objects/1:Conveyor2]"/>
+			</FB>
+			<FB Name="AtEntry2" Type="SUBSCRIBE_1" Comment="" x="1733.3333333333335" y="2533.3333333333335">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://localhost:4840#;/Objects/1:AtEntry2]"/>
+			</FB>
+			<FB Name="AtTrans1" Type="SUBSCRIBE_1" Comment="" x="1733.3333333333335" y="4533.333333333334">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://localhost:4840#;/Objects/1:AtTrans1]"/>
+			</FB>
+			<FB Name="E_DELAY" Type="E_DELAY" Comment="" x="-1066.6666666666667" y="3200.0">
+				<Parameter Name="DT" Value="T#1s"/>
+			</FB>
+			<FB Name="ExitConv" Type="SUBSCRIBE_1" Comment="" x="1733.3333333333335" y="6800.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://localhost:4840#;/Objects/1:ExitConv]"/>
+			</FB>
+			<FB Name="Conveyor2" Type="SUBSCRIBE_1" Comment="" x="1733.3333333333335" y="12266.666666666668">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://localhost:4840#;/Objects/1:Conveyor2]"/>
+			</FB>
+			<FB Name="TransLeft2" Type="SUBSCRIBE_1" Comment="" x="1733.3333333333335" y="8000.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://localhost:4840#;/Objects/1:TransLeft2]"/>
+			</FB>
+			<FB Name="Load1" Type="SUBSCRIBE_1" Comment="" x="1733.3333333333335" y="11200.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://localhost:4840#;/Objects/1:Load1]"/>
+			</FB>
+			<FB Name="TransLeft1" Type="SUBSCRIBE_1" Comment="" x="1733.3333333333335" y="9066.666666666668">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://localhost:4840#;/Objects/1:TransLeft1]"/>
+			</FB>
+			<FB Name="Load2" Type="SUBSCRIBE_1" Comment="" x="1733.3333333333335" y="13333.333333333334">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://localhost:4840#;/Objects/1:Load2]"/>
+			</FB>
+			<FB Name="Reset" Type="SUBSCRIBE_1" Comment="" x="1733.3333333333335" y="5600.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://localhost:4840#;/Objects/1:Reset]"/>
+			</FB>
+			<FB Name="Load2_Acuator" Type="CLIENT_1_0" Comment="" x="7733.333333333334" y="6533.333333333334">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[WRITE;opc.tcp://localhost:4840#;/Objects/1:Load2]"/>
+			</FB>
+			<FB Name="Conveyor2Check" Type="Conveyor2Check" Comment="" x="3600.0" y="3733.3333333333335">
+			</FB>
+			<FB Name="Load2Check" Type="Load2Check" Comment="" x="3733.3333333333335" y="1866.6666666666667">
+			</FB>
+			<FB Name="ExitCheck" Type="ExitCheck" Comment="" x="3733.3333333333335" y="533.3333333333334">
+			</FB>
+			<FB Name="COnveyor1_Actuator" Type="CLIENT_1_0" Comment="" x="7866.666666666667" y="10400.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[WRITE;opc.tcp://localhost:4840#;/Objects/1:Conveyor1]"/>
+			</FB>
+			<FB Name="AtEntry1" Type="SUBSCRIBE_1" Comment="" x="1733.3333333333335" y="10186.666666666668">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://localhost:4840#;/Objects/1:AtEntry1]"/>
+			</FB>
+			<FB Name="Load1Check" Type="Load1Check" Comment="" x="3733.3333333333335" y="5066.666666666667">
+			</FB>
+			<FB Name="Conveyor1Check" Type="Conveyor1Check" Comment="" x="4000.0" y="10266.666666666668">
+			</FB>
+			<FB Name="TransLeftCheck_1" Type="TransLeftCheck" Comment="" x="3733.3333333333335" y="7600.0">
+			</FB>
+			<FB Name="COnveyor1_Actuator_1" Type="CLIENT_1_0" Comment="" x="7866.666666666667" y="13466.666666666668">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[WRITE;opc.tcp://localhost:4840#;/Objects/1:Conveyor1]"/>
+			</FB>
+			<FB Name="Conveyor2_Actuator_1" Type="CLIENT_1_0" Comment="" x="7866.666666666667" y="12400.0">
+				<Parameter Name="QI" Value="1"/>
+				<Parameter Name="ID" Value="opc_ua[WRITE;opc.tcp://localhost:4840#;/Objects/1:Conveyor2]"/>
+			</FB>
+			<FB Name="MyBasicTest" Type="MyBasicTest" Comment="" x="-1446.6666666666667" y="5973.333333333334">
+			</FB>
+			<EventConnections>
+				<Connection Source="E_DELAY.EO" Destination="AtExit.INIT" Comment="" dx1="1066.6666666666667"/>
+				<Connection Source="E_DELAY.EO" Destination="Start.INIT" Comment="" dx1="1066.6666666666667"/>
+				<Connection Source="E_DELAY.EO" Destination="AtEntry2.INIT" Comment="" dx1="1073.3333333333335"/>
+				<Connection Source="E_DELAY.EO" Destination="AtTrans2.INIT" Comment="" dx1="1073.3333333333335"/>
+				<Connection Source="E_DELAY.EO" Destination="AtTrans1.INIT" Comment="" dx1="1073.3333333333335"/>
+				<Connection Source="E_DELAY.EO" Destination="TransLeft1.INIT" Comment="" dx1="1073.3333333333335"/>
+				<Connection Source="E_DELAY.EO" Destination="ExitConv.INIT" Comment="" dx1="1073.3333333333335"/>
+				<Connection Source="E_DELAY.EO" Destination="Load1.INIT" Comment="" dx1="1086.6666666666667"/>
+				<Connection Source="E_DELAY.EO" Destination="Conveyor2.INIT" Comment="" dx1="1086.6666666666667"/>
+				<Connection Source="E_DELAY.EO" Destination="TransLeft2.INIT" Comment="" dx1="1073.3333333333335"/>
+				<Connection Source="E_DELAY.EO" Destination="Load2.INIT" Comment="" dx1="1073.3333333333335"/>
+				<Connection Source="E_DELAY.EO" Destination="Reset.INIT" Comment="" dx1="1073.3333333333335"/>
+				<Connection Source="Conveyor2Check.CNF" Destination="Conveyor2_Actuator.REQ" Comment="" dx1="1460.0"/>
+				<Connection Source="AtTrans2.IND" Destination="Conveyor2Check.REQ" Comment="" dx1="513.3333333333334"/>
+				<Connection Source="AtEntry2.IND" Destination="Load2Check.REQ" Comment="" dx1="580.0"/>
+				<Connection Source="Load2Check.CNF" Destination="Load2_Acuator.REQ" Comment="" dx1="1600.0"/>
+				<Connection Source="AtTrans2.INITO" Destination="Conveyor2_Actuator.INIT" Comment="" dx1="2593.3333333333335"/>
+				<Connection Source="AtEntry2.INITO" Destination="Load2_Acuator.INIT" Comment="" dx1="2580.0"/>
+				<Connection Source="AtTrans2.INITO" Destination="TransLeft2_Actuator.INIT" Comment="" dx1="2606.666666666667"/>
+				<Connection Source="AtTrans2.INITO" Destination="TransLeft1_Actuator.INIT" Comment="" dx1="2606.666666666667"/>
+				<Connection Source="AtTrans1.INITO" Destination="Load1_Actuator.INIT" Comment="" dx1="2580.0"/>
+				<Connection Source="AtExit.INITO" Destination="ExitConv_Acuator.INIT" Comment="" dx1="2453.3333333333335"/>
+				<Connection Source="AtExit.IND" Destination="ExitCheck.REQ" Comment="" dx1="586.6666666666667"/>
+				<Connection Source="ExitCheck.CNF" Destination="ExitConv_Acuator.REQ" Comment="" dx1="1560.0"/>
+				<Connection Source="E_DELAY.EO" Destination="AtEntry1.INIT" Comment="" dx1="1066.6666666666667" dx2="1066.6666666666667" dy="0.0"/>
+				<Connection Source="AtTrans1.IND" Destination="Load1Check.REQ" Comment="" dx1="580.0"/>
+				<Connection Source="AtEntry1.IND" Destination="Load1Check.REQ" Comment="" dx1="586.6666666666667"/>
+				<Connection Source="TransLeft2.IND" Destination="Load1Check.REQ" Comment="" dx1="580.0"/>
+				<Connection Source="Load1Check.CNF" Destination="Load1_Actuator.REQ" Comment="" dx1="1600.0"/>
+				<Connection Source="TransLeft2.IND" Destination="Load2Check.REQ" Comment="" dx1="580.0"/>
+				<Connection Source="AtEntry1.IND" Destination="Conveyor1Check.REQ" Comment="" dx1="773.3333333333334"/>
+				<Connection Source="TransLeft1.IND" Destination="Conveyor1Check.REQ" Comment="" dx1="773.3333333333334"/>
+				<Connection Source="Conveyor1Check.CNF" Destination="COnveyor1_Actuator.REQ" Comment="" dx1="1400.0"/>
+				<Connection Source="TransLeft1.INITO" Destination="Conveyor1Check.INIT" Comment="" dx1="773.3333333333334"/>
+				<Connection Source="Conveyor1Check.INITO" Destination="COnveyor1_Actuator.INIT" Comment="" dx1="1400.0"/>
+				<Connection Source="AtTrans2.IND" Destination="TransLeftCheck_1.REQ" Comment="" dx1="580.0"/>
+				<Connection Source="AtEntry1.IND" Destination="TransLeftCheck_1.REQ" Comment="" dx1="580.0"/>
+				<Connection Source="AtTrans1.IND" Destination="TransLeftCheck_1.REQ" Comment="" dx1="580.0"/>
+				<Connection Source="TransLeftCheck_1.CNF" Destination="TransLeft2_Actuator.REQ" Comment="" dx1="1533.3333333333335"/>
+				<Connection Source="TransLeftCheck_1.CNF" Destination="TransLeft1_Actuator.REQ" Comment="" dx1="1533.3333333333335"/>
+			</EventConnections>
+			<DataConnections>
+				<Connection Source="Conveyor2Check.QO" Destination="Conveyor2_Actuator.SD_1" Comment="" dx1="1460.0"/>
+				<Connection Source="AtTrans2.RD_1" Destination="Conveyor2Check.QI" Comment="" dx1="513.3333333333334"/>
+				<Connection Source="AtEntry2.RD_1" Destination="Load2Check.AtEntry2" Comment="" dx1="580.0"/>
+				<Connection Source="TransLeft2.RD_1" Destination="Load2Check.TransLeft2" Comment="" dx1="580.0"/>
+				<Connection Source="Load2Check.QO" Destination="Load2_Acuator.SD_1" Comment="" dx1="1600.0"/>
+				<Connection Source="AtExit.RD_1" Destination="ExitCheck.AtExit" Comment="" dx1="586.6666666666667"/>
+				<Connection Source="ExitCheck.QO" Destination="ExitConv_Acuator.SD_1" Comment="" dx1="1493.3333333333335"/>
+				<Connection Source="AtTrans1.RD_1" Destination="Load1Check.AtTrans1" Comment="" dx1="580.0"/>
+				<Connection Source="AtEntry1.RD_1" Destination="Load1Check.AtEntry1" Comment="" dx1="580.0"/>
+				<Connection Source="TransLeft2.RD_1" Destination="Load1Check.TransLeft" Comment="" dx1="580.0"/>
+				<Connection Source="Load1Check.QO" Destination="Load1_Actuator.SD_1" Comment="" dx1="1600.0"/>
+				<Connection Source="AtEntry1.RD_1" Destination="Conveyor1Check.AtEntry1" Comment="" dx1="773.3333333333334"/>
+				<Connection Source="TransLeft1.RD_1" Destination="Conveyor1Check.TransLeft" Comment="" dx1="773.3333333333334"/>
+				<Connection Source="Conveyor1Check.QO" Destination="COnveyor1_Actuator.SD_1" Comment="" dx1="1400.0"/>
+				<Connection Source="AtTrans2.RD_1" Destination="TransLeftCheck_1.AtTrans2" Comment="" dx1="580.0"/>
+				<Connection Source="AtEntry1.RD_1" Destination="TransLeftCheck_1.AtEntry1" Comment="" dx1="580.0"/>
+				<Connection Source="AtTrans1.RD_1" Destination="TransLeftCheck_1.AtTrans1" Comment="" dx1="580.0"/>
+				<Connection Source="TransLeftCheck_1.QO" Destination="TransLeft2_Actuator.SD_1" Comment="" dx1="1533.3333333333335"/>
+				<Connection Source="TransLeftCheck_1.QO" Destination="TransLeft1_Actuator.SD_1" Comment="" dx1="1533.3333333333335"/>
+			</DataConnections>
+		</SubAppNetwork>
+	</Application>
+	<Device Name="FORTE_PC" Type="FORTE_PC" Comment="" x="1866.6666666666667" y="2666.666666666667">
+		<Parameter Name="MGR_ID" Value="&quot;localhost:61499&quot;"/>
+		<Attribute Name="Profile" Type="STRING" Value="DynamicTypeLoad" Comment="device profile"/>
+		<Attribute Name="Color" Type="STRING" Value="255,190,111" Comment="color"/>
+		<Attribute Name="FBType" Type="STRING" Value="GEN_E_MUX, F_LT, F_LWORD_TO_WORD, F_TAN, F_DINT_TO_UINT, F_BYTE_TO_DINT, F_ADD_DT_TIME, F_TIME_IN_US_TO_LREAL, F_INT_TO_UDINT, F_ADD_TOD_TIME, F_SUB_DT_DT, F_DT_TO_TOD, F_WSTRING_TO_REAL, F_UINT_TO_BCD_WORD, F_UDINT_TO_REAL, F_REAL_TO_UDINT, F_DWORD_TO_WORD, F_MUL, FB_CTUD_LINT, TEST_CONDITION, F_LE, GEN_SUBSCRIBE, F_LN, FB_CTD_DINT, GEN_OR, E_CYCLE, FB_F_TRIG, F_LREAL_TO_SINT, E_F_TRIG, F_LWORD_TO_UINT, E_RS, F_UINT_TO_WORD, F_WORD_TO_DINT, F_OR, F_WORD_TO_BYTE, F_TIME_IN_NS_TO_ULINT, FB_CTD_ULINT, FB_TOF, STEST_END, F_NE, FB_TON, F_STRING_TO_UINT, F_LWORD_TO_ULINT, F_INT_TO_STRING, F_INT_TO_BYTE, F_INT_TO_DINT, F_ULINT_TO_LINT, F_DWORD_TO_UINT, F_WSTRING_TO_ULINT, F_WSTRING_TO_LWORD, F_STRING_TO_DWORD, DWORD2DWORD, F_TIME_IN_NS_TO_LINT, F_DINT_TO_WSTRING, E_SELECT, F_LINT_TO_STRING, FB_CTUD, F_MULTIME, F_USINT_TO_INT, LocalizedText2LocalizedText, NodeInit, F_DWORD_TO_UDINT, F_UINT_TO_LWORD, F_SINT_TO_LWORD, GEN_F_MUX, USINT2USINT, F_LINT_TO_SINT, F_WORD_TO_USINT, F_DWORD_TO_INT, F_LREAL_TO_REAL, F_BOOL_TO_LINT, F_LEFT, FB_CTD, E_SR, F_UDINT_TO_BCD_DWORD, GEN_XOR, F_DINT_TO_WORD, F_SUB_TOD_TIME, E_RESTART, E_PERMIT, TIME2TIME, F_UINT_TO_SINT, F_XOR, F_STRING_TO_WORD, F_SEL, F_ULINT_TO_LREAL, F_SINT_TO_LREAL, F_DINT_TO_SINT, E_TimeOut, F_BYTE_TO_UDINT, F_REPLACE, F_LINT_TO_USINT, F_ABS, F_WORD_TO_LWORD, E_DELAY, GEN_ADD, F_INT_TO_WSTRING, F_STRING_TO_ULINT, F_USINT_TO_STRING, F_DINT_TO_USINT, F_STRING_TO_BOOL, F_DWORD_TO_WSTRING, F_INT_TO_REAL, F_DWORD_TO_STRING, E_CTU, F_TIME_TO_STRING, F_WSTRING_TO_BYTE, F_USINT_TO_WSTRING, F_WSTRING_TO_DINT, F_WSTRING_TO_DWORD, F_MOVE, F_WSTRING_TO_STRING, F_USINT_TO_LINT, F_DIV, F_WSTRING_TO_SINT, E_CTD, F_UINT_TO_DWORD, F_LWORD_TO_LINT, F_STRING_TO_TIME, FB_CTUD_DINT, F_ADD, F_BYTE_TO_LINT, F_TIME_IN_MS_TO_LREAL, F_LREAL_TO_UINT, F_ACOS, F_DWORD_TO_LINT, F_SHL, F_REAL_TO_ULINT, F_ULINT_TO_UINT, F_UDINT_TO_SINT, F_SHR, F_BOOL_TO_INT, UINT2UINT, F_WORD_TO_DWORD, F_INT_TO_LWORD, F_USINT_TO_UINT, F_LREAL_TO_WSTRING, F_INT_TO_ULINT, GEN_CSV_WRITER, F_LINT_TO_WORD, F_UINT_TO_LREAL, F_STRING_TO_SINT, F_SINT_TO_WORD, F_STRING_TO_WSTRING, STRING2STRING, F_LREAL_TO_DINT, F_SIN, F_UINT_TO_USINT, FB_CTU_LINT, F_DINT_TO_ULINT, F_REAL_TO_UINT, RMT_RES, F_ULINT_TO_WORD, F_INT_TO_LINT, E_D_FF, F_STRING_TO_USINT, FB_CTD_LINT, FB_R_TRIG, F_INT_TO_DWORD, F_WORD_TO_LINT, F_UDINT_TO_INT, REAL2REAL, F_LREAL_TO_STRING, F_WSTRING_TO_INT, F_LREAL_TO_USINT, F_DINT_TO_LWORD, DEV_MGR, F_SINT_TO_UINT, E_CTUD, E_RDELAY, F_SINT_TO_ULINT, F_LINT_TO_ULINT, F_RIGHT, F_SINT_TO_INT, F_LWORD_TO_WSTRING, SINT2SINT, FB_CTD_UDINT, F_LINT_TO_LWORD, F_LWORD_TO_UDINT, F_LWORD_TO_STRING, F_TRUNC, F_ULINT_TO_DWORD, F_TIME_IN_S_TO_LREAL, F_BOOL_TO_DWORD, E_TRAIN, OUT_ANY_CONSOLE, F_ULINT_TO_SINT, F_DINT_TO_LINT, F_BOOL_TO_USINT, F_UDINT_TO_DWORD, GEN_E_DEMUX, F_SQRT, F_BOOL_TO_DINT, F_BOOL_TO_BYTE, F_UINT_TO_INT, F_TIME_IN_S_TO_LINT, F_ULINT_TO_USINT, F_UINT_TO_REAL, F_LREAL_TO_LWORD, F_SINT_TO_LINT, F_MAX, F_LREAL_TO_INT, F_UDINT_TO_LWORD, INT2INT, F_BYTE_TO_ULINT, F_UDINT_TO_WORD, F_LINT_TO_UINT, F_TIME_IN_US_TO_ULINT, F_COS, F_TIME_IN_NS_TO_LREAL, F_REAL_TO_LINT, F_STRING_TO_LWORD, F_BYTE_TO_STRING, F_USINT_TO_WORD, E_REND, F_ASIN, F_REAL_TO_INT, F_BOOL_TO_LWORD, F_WORD_BCD_TO_UINT, F_BOOL_TO_SINT, F_BYTE_TO_INT, F_BOOL_TO_ULINT, EMB_RES, F_BYTE_TO_WORD, F_STRING_TO_INT, F_USINT_TO_LWORD, F_DWORD_TO_DINT, F_ULINT_TO_LWORD, GEN_APPEND_STRING, F_USINT_TO_ULINT, GEN_SUBL, F_DWORD_TO_BYTE, F_DIVTIME, F_ROL, F_LWORD_TO_DINT, F_WORD_TO_SINT, F_STRING_TO_REAL, F_LWORD_TO_BYTE, FB_CTU_DINT, GEN_AND, F_AND, F_ROR, GEN_CLIENT, F_ULINT_TO_WSTRING, F_SINT_TO_STRING, F_LREAL_TO_LINT, WSTRING2WSTRING, F_WORD_TO_INT, F_UINT_TO_BYTE, F_UDINT_TO_UINT, F_SINT_TO_UDINT, F_UINT_TO_DINT, F_UINT_TO_UDINT, F_UINT_TO_WSTRING, F_WSTRING_TO_UINT, F_DINT_TO_UDINT, E_SPLIT, F_DWORD_TO_LWORD, F_USINT_TO_SINT, F_ULINT_TO_BCD_LWORD, F_BYTE_BCD_TO_USINT, F_DWORD_TO_ULINT, F_BYTE_TO_SINT, F_BYTE_TO_WSTRING, GEN_ARRAY2ARRAY, F_DT_TO_DATE, GEN_STRUCT_DEMUX, F_LEN, GEN_STRUCT_MUX, F_INT_TO_WORD, FB_RANDOM, F_LINT_TO_UDINT, F_EXP, F_USINT_TO_DWORD, F_TIME_IN_MS_TO_ULINT, F_REAL_TO_SINT, F_INT_TO_USINT, F_UDINT_TO_WSTRING, F_EXPT, F_SUB, F_ULINT_TO_REAL, F_REAL_TO_LREAL, F_MID, F_BYTE_TO_UINT, F_BYTE_TO_DWORD, F_INT_TO_UINT, F_DWORD_TO_REAL, F_DINT_TO_BYTE, F_WORD_TO_STRING, F_REAL_TO_STRING, F_SUB_TOD_TOD, SET_AT_INDEX, F_MIN, F_LREAL_TO_ULINT, F_STRING_TO_BYTE, F_BYTE_TO_LWORD, F_STRING_TO_DINT, F_WORD_TO_WSTRING, BOOL2BOOL, F_LINT_TO_INT, F_WSTRING_TO_TIME, FB_CTU_UDINT, F_WSTRING_TO_BOOL, F_INSERT, F_SUB_DT_TIME, F_FIND, F_UDINT_TO_ULINT, F_WORD_TO_UDINT, F_DINT_TO_DWORD, F_WSTRING_TO_USINT, GEN_VALUES2ARRAY, GEN_ARRAY2VALUES, F_WSTRING_TO_WORD, F_DINT_TO_STRING, F_WORD_TO_UINT, F_TIME_IN_US_TO_LINT, F_LINT_TO_DWORD, F_CONCAT, FB_CTUD_ULINT, F_UDINT_TO_LINT, F_SUB_DATE_DATE, F_LWORD_TO_LREAL, F_LWORD_TO_INT, WORD2WORD, E_STOPWATCH, F_LIMIT, F_TIME_IN_S_TO_ULINT, F_LWORD_TO_USINT, F_REAL_TO_DINT, F_DWORD_TO_USINT, E_MERGE, F_SINT_TO_DWORD, E_DEMUX, F_BOOL_TO_UDINT, BYTE2BYTE, FB_TP, F_USINT_TO_BCD_BYTE, F_SINT_TO_DINT, F_UINT_TO_LINT, F_SINT_TO_BYTE, F_ATAN, F_LINT_TO_BYTE, F_BYTE_TO_USINT, F_ULINT_TO_UDINT, FB_SR, F_NOT, F_DINT_TO_INT, F_LINT_TO_DINT, F_DELETE, FB_CTU, GEN_SERVER, GEN_PUBL, F_UDINT_TO_LREAL, F_BOOL_TO_UINT, F_UINT_TO_STRING, E_R_TRIG, F_GE, F_LWORD_BCD_TO_ULINT, F_UDINT_TO_STRING, F_REAL_TO_WSTRING, FB_RS, F_MUX_2, F_LINT_TO_WSTRING, F_USINT_TO_UDINT, F_UINT_TO_ULINT, F_EQ, E_T_FF, F_USINT_TO_REAL, LREAL2LREAL, F_STRING_TO_LREAL, F_ULINT_TO_STRING, F_MOD, E_RTimeOut, F_ULINT_TO_DINT, F_ULINT_TO_BYTE, F_WSTRING_TO_UDINT, F_TIME_TO_WSTRING, GET_STRUCT_VALUE, GEN_PUBLISH, F_REAL_TO_DWORD, F_DWORD_BCD_TO_UDINT, F_INT_TO_LREAL, F_SINT_TO_WSTRING, F_LWORD_TO_SINT, F_GT, F_LINT_TO_REAL, F_TIME_IN_MS_TO_LINT, F_SINT_TO_REAL, F_LOG, F_ULINT_TO_INT, F_DWORD_TO_SINT, F_BOOL_TO_WORD, F_REAL_TO_USINT, E_SWITCH, F_LINT_TO_LREAL, F_STRING_TO_LINT, F_SINT_TO_USINT, F_DINT_TO_REAL, DINT2DINT, F_WORD_TO_ULINT, F_INT_TO_SINT, F_CONCAT_DATE_TOD, F_WSTRING_TO_LREAL, GET_AT_INDEX, F_USINT_TO_LREAL, F_BOOL_TO_WSTRING, FB_CTU_ULINT, F_DINT_TO_LREAL, UDINT2UDINT, F_USINT_TO_BYTE, F_BOOL_TO_STRING, F_LWORD_TO_DWORD, F_LREAL_TO_UDINT, F_STRING_TO_UDINT, F_UDINT_TO_DINT, F_UDINT_TO_BYTE, F_WSTRING_TO_LINT, F_USINT_TO_DINT" Comment="created during deployment"/>
+		<Resource Name="EMB_RES" Type="EMB_RES" Comment="" x="0.0" y="0.0">
+			<FBNetwork>
+				<FB Name="E_DELAY" Type="E_DELAY" Comment="" x="893.3333333333334" y="5266.666666666667">
+					<Parameter Name="DT" Value="T#3s"/>
+				</FB>
+				<FB Name="AtTrans2_Init" Type="SUBSCRIBE_1" Comment="" x="4086.666666666667" y="11106.666666666668">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:AtTrans2]"/>
+				</FB>
+				<FB Name="AtExit_Init" Type="SUBSCRIBE_1" Comment="" x="4086.666666666667" y="9160.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:AtExit]"/>
+				</FB>
+				<FB Name="Load1_Init" Type="SUBSCRIBE_1" Comment="" x="4086.666666666667" y="10133.333333333334">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:Load1]"/>
+				</FB>
+				<FB Name="ExitConv_Init" Type="SUBSCRIBE_1" Comment="" x="4086.666666666667" y="7213.333333333334">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:ExitConv]"/>
+				</FB>
+				<FB Name="TransLeft2_Init" Type="SUBSCRIBE_1" Comment="" x="4086.666666666667" y="8186.666666666667">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:TransLeft2]"/>
+				</FB>
+				<FB Name="AtTrans1_Init" Type="SUBSCRIBE_1" Comment="" x="4086.666666666667" y="5266.666666666667">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:AtTrans1]"/>
+				</FB>
+				<FB Name="Reset_Init" Type="SUBSCRIBE_1" Comment="" x="4086.666666666667" y="6240.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:Reset]"/>
+				</FB>
+				<FB Name="Load2_Init" Type="SUBSCRIBE_1" Comment="" x="4086.666666666667" y="3320.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:Load2]"/>
+				</FB>
+				<FB Name="AtEntry2_Init" Type="SUBSCRIBE_1" Comment="" x="4086.666666666667" y="4293.333333333334">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:AtEntry2]"/>
+				</FB>
+				<FB Name="Start_Init" Type="SUBSCRIBE_1" Comment="" x="4086.666666666667" y="2346.666666666667">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:Start]"/>
+				</FB>
+				<FB Name="Conveyor2_Init" Type="SUBSCRIBE_1" Comment="" x="4086.666666666667" y="1373.3333333333335">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:Conveyor2]"/>
+				</FB>
+				<FB Name="TransLeft1_Init" Type="SUBSCRIBE_1" Comment="" x="4086.666666666667" y="400.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:TransLeft1]"/>
+				</FB>
+				<FB Name="Conveyor1_Init" Type="SUBSCRIBE_1" Comment="" x="4133.333333333334" y="12400.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:Conveyor1]"/>
+				</FB>
+				<FB Name="AtEntry1_Init" Type="SUBSCRIBE_1" Comment="" x="4133.333333333334" y="13466.666666666668">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[READ;/Objects/1:AtEntry1]"/>
+				</FB>
+				<FB Name="NodeInit" Type="NodeInit" Comment="" x="6540.0" y="7233.333333333334">
+				</FB>
+				<EventConnections>
+					<Connection Source="START.WARM" Destination="E_DELAY.START" Comment="" dx1="680.0"/>
+					<Connection Source="START.COLD" Destination="E_DELAY.START" Comment="" dx1="680.0"/>
+					<Connection Source="E_DELAY.EO" Destination="AtTrans2_Init.INIT" Comment="" dx1="1266.6666666666667"/>
+					<Connection Source="E_DELAY.EO" Destination="AtExit_Init.INIT" Comment="" dx1="1266.6666666666667"/>
+					<Connection Source="E_DELAY.EO" Destination="Load1_Init.INIT" Comment="" dx1="1266.6666666666667"/>
+					<Connection Source="E_DELAY.EO" Destination="ExitConv_Init.INIT" Comment="" dx1="1266.6666666666667"/>
+					<Connection Source="E_DELAY.EO" Destination="TransLeft2_Init.INIT" Comment="" dx1="1266.6666666666667"/>
+					<Connection Source="E_DELAY.EO" Destination="AtTrans1_Init.INIT" Comment=""/>
+					<Connection Source="E_DELAY.EO" Destination="Reset_Init.INIT" Comment="" dx1="1266.6666666666667"/>
+					<Connection Source="E_DELAY.EO" Destination="Load2_Init.INIT" Comment="" dx1="1266.6666666666667"/>
+					<Connection Source="E_DELAY.EO" Destination="AtEntry2_Init.INIT" Comment="" dx1="1266.6666666666667"/>
+					<Connection Source="E_DELAY.EO" Destination="Start_Init.INIT" Comment="" dx1="1266.6666666666667"/>
+					<Connection Source="E_DELAY.EO" Destination="Conveyor2_Init.INIT" Comment="" dx1="1266.6666666666667"/>
+					<Connection Source="E_DELAY.EO" Destination="TransLeft1_Init.INIT" Comment="" dx1="1266.6666666666667"/>
+					<Connection Source="E_DELAY.EO" Destination="Conveyor1_Init.INIT" Comment=""/>
+					<Connection Source="E_DELAY.EO" Destination="AtEntry1_Init.INIT" Comment=""/>
+				</EventConnections>
+				<DataConnections>
+					<Connection Source="TransLeft1_Init.RD_1" Destination="NodeInit.TransLeft1" Comment=""/>
+					<Connection Source="Conveyor2_Init.RD_1" Destination="NodeInit.Conveyor2" Comment=""/>
+					<Connection Source="Start_Init.RD_1" Destination="NodeInit.Start" Comment=""/>
+					<Connection Source="Load2_Init.RD_1" Destination="NodeInit.Load2" Comment=""/>
+					<Connection Source="AtEntry2_Init.RD_1" Destination="NodeInit.AtEntry2" Comment=""/>
+					<Connection Source="AtTrans1_Init.RD_1" Destination="NodeInit.AtTrans1" Comment=""/>
+					<Connection Source="Reset_Init.RD_1" Destination="NodeInit.Reset" Comment=""/>
+					<Connection Source="ExitConv_Init.RD_1" Destination="NodeInit.ExitConv" Comment=""/>
+					<Connection Source="TransLeft2_Init.RD_1" Destination="NodeInit.TransLeft2" Comment=""/>
+					<Connection Source="AtExit_Init.RD_1" Destination="NodeInit.AtExit" Comment=""/>
+					<Connection Source="Load1_Init.RD_1" Destination="NodeInit.Load1" Comment=""/>
+					<Connection Source="AtTrans2_Init.RD_1" Destination="NodeInit.AtTrans2" Comment=""/>
+					<Connection Source="Conveyor1_Init.RD_1" Destination="NodeInit.Conveyor1" Comment=""/>
+					<Connection Source="AtEntry1_Init.RD_1" Destination="NodeInit.AtEntry1" Comment=""/>
+				</DataConnections>
+			</FBNetwork>
+		</Resource>
+	</Device>
+	<Device Name="FORTE_PC_1" Type="FORTE_PC" Comment="" x="3920.0" y="2853.3333333333335">
+		<Parameter Name="MGR_ID" Value="&quot;localhost:61500&quot;"/>
+		<Attribute Name="Profile" Type="STRING" Value="DynamicTypeLoad" Comment="device profile"/>
+		<Attribute Name="Color" Type="STRING" Value="190,202,69" Comment="color"/>
+		<Attribute Name="FBType" Type="STRING" Value="GEN_E_MUX, F_LT, F_LWORD_TO_WORD, F_TAN, F_DINT_TO_UINT, F_BYTE_TO_DINT, F_ADD_DT_TIME, F_TIME_IN_US_TO_LREAL, F_INT_TO_UDINT, F_ADD_TOD_TIME, F_SUB_DT_DT, F_DT_TO_TOD, F_WSTRING_TO_REAL, F_UINT_TO_BCD_WORD, F_UDINT_TO_REAL, F_REAL_TO_UDINT, F_DWORD_TO_WORD, F_MUL, FB_CTUD_LINT, TEST_CONDITION, F_LE, GEN_SUBSCRIBE, F_LN, FB_CTD_DINT, GEN_OR, E_CYCLE, FB_F_TRIG, F_LREAL_TO_SINT, E_F_TRIG, F_LWORD_TO_UINT, E_RS, F_UINT_TO_WORD, F_WORD_TO_DINT, F_OR, F_WORD_TO_BYTE, F_TIME_IN_NS_TO_ULINT, FB_CTD_ULINT, FB_TOF, STEST_END, F_NE, FB_TON, F_STRING_TO_UINT, F_LWORD_TO_ULINT, F_INT_TO_STRING, F_INT_TO_BYTE, F_INT_TO_DINT, F_ULINT_TO_LINT, F_DWORD_TO_UINT, F_WSTRING_TO_ULINT, F_WSTRING_TO_LWORD, F_STRING_TO_DWORD, DWORD2DWORD, F_TIME_IN_NS_TO_LINT, F_DINT_TO_WSTRING, E_SELECT, F_LINT_TO_STRING, FB_CTUD, F_MULTIME, F_USINT_TO_INT, LocalizedText2LocalizedText, F_DWORD_TO_UDINT, F_UINT_TO_LWORD, F_SINT_TO_LWORD, GEN_F_MUX, USINT2USINT, F_LINT_TO_SINT, F_WORD_TO_USINT, F_DWORD_TO_INT, F_LREAL_TO_REAL, F_BOOL_TO_LINT, F_LEFT, FB_CTD, E_SR, F_UDINT_TO_BCD_DWORD, GEN_XOR, F_DINT_TO_WORD, F_SUB_TOD_TIME, E_RESTART, E_PERMIT, TIME2TIME, F_UINT_TO_SINT, F_XOR, F_STRING_TO_WORD, F_SEL, F_ULINT_TO_LREAL, F_SINT_TO_LREAL, F_DINT_TO_SINT, E_TimeOut, F_BYTE_TO_UDINT, F_REPLACE, F_LINT_TO_USINT, F_ABS, F_WORD_TO_LWORD, MyBasicTest, E_DELAY, GEN_ADD, F_INT_TO_WSTRING, F_STRING_TO_ULINT, F_USINT_TO_STRING, F_DINT_TO_USINT, F_STRING_TO_BOOL, F_DWORD_TO_WSTRING, F_INT_TO_REAL, F_DWORD_TO_STRING, E_CTU, F_TIME_TO_STRING, F_WSTRING_TO_BYTE, F_USINT_TO_WSTRING, F_WSTRING_TO_DINT, F_WSTRING_TO_DWORD, F_MOVE, F_WSTRING_TO_STRING, F_USINT_TO_LINT, F_DIV, F_WSTRING_TO_SINT, E_CTD, F_UINT_TO_DWORD, F_LWORD_TO_LINT, F_STRING_TO_TIME, FB_CTUD_DINT, F_ADD, F_BYTE_TO_LINT, F_TIME_IN_MS_TO_LREAL, F_LREAL_TO_UINT, F_ACOS, F_DWORD_TO_LINT, F_SHL, F_REAL_TO_ULINT, F_ULINT_TO_UINT, F_UDINT_TO_SINT, F_SHR, F_BOOL_TO_INT, UINT2UINT, F_WORD_TO_DWORD, F_INT_TO_LWORD, F_USINT_TO_UINT, F_LREAL_TO_WSTRING, F_INT_TO_ULINT, GEN_CSV_WRITER, F_LINT_TO_WORD, F_UINT_TO_LREAL, F_STRING_TO_SINT, F_SINT_TO_WORD, F_STRING_TO_WSTRING, STRING2STRING, F_LREAL_TO_DINT, F_SIN, F_UINT_TO_USINT, FB_CTU_LINT, F_DINT_TO_ULINT, F_REAL_TO_UINT, RMT_RES, F_ULINT_TO_WORD, F_INT_TO_LINT, E_D_FF, F_STRING_TO_USINT, FB_CTD_LINT, FB_R_TRIG, F_INT_TO_DWORD, F_WORD_TO_LINT, F_UDINT_TO_INT, REAL2REAL, F_LREAL_TO_STRING, F_WSTRING_TO_INT, F_LREAL_TO_USINT, F_DINT_TO_LWORD, DEV_MGR, F_SINT_TO_UINT, E_CTUD, E_RDELAY, F_SINT_TO_ULINT, F_LINT_TO_ULINT, F_RIGHT, F_SINT_TO_INT, F_LWORD_TO_WSTRING, SINT2SINT, FB_CTD_UDINT, F_LINT_TO_LWORD, F_LWORD_TO_UDINT, F_LWORD_TO_STRING, F_TRUNC, F_ULINT_TO_DWORD, F_TIME_IN_S_TO_LREAL, F_BOOL_TO_DWORD, E_TRAIN, OUT_ANY_CONSOLE, F_ULINT_TO_SINT, F_DINT_TO_LINT, F_BOOL_TO_USINT, F_UDINT_TO_DWORD, GEN_E_DEMUX, F_SQRT, F_BOOL_TO_DINT, F_BOOL_TO_BYTE, F_UINT_TO_INT, F_TIME_IN_S_TO_LINT, F_ULINT_TO_USINT, F_UINT_TO_REAL, F_LREAL_TO_LWORD, F_SINT_TO_LINT, F_MAX, F_LREAL_TO_INT, F_UDINT_TO_LWORD, INT2INT, F_BYTE_TO_ULINT, F_UDINT_TO_WORD, F_LINT_TO_UINT, F_TIME_IN_US_TO_ULINT, F_COS, Conveyor2Check, F_TIME_IN_NS_TO_LREAL, F_REAL_TO_LINT, F_STRING_TO_LWORD, F_BYTE_TO_STRING, F_USINT_TO_WORD, E_REND, F_ASIN, TransLeftCheck, F_REAL_TO_INT, F_BOOL_TO_LWORD, F_WORD_BCD_TO_UINT, F_BOOL_TO_SINT, F_BYTE_TO_INT, F_BOOL_TO_ULINT, EMB_RES, F_BYTE_TO_WORD, F_STRING_TO_INT, F_USINT_TO_LWORD, F_DWORD_TO_DINT, F_ULINT_TO_LWORD, GEN_APPEND_STRING, F_USINT_TO_ULINT, GEN_SUBL, F_DWORD_TO_BYTE, F_DIVTIME, ExitCheck, F_ROL, F_LWORD_TO_DINT, F_WORD_TO_SINT, F_STRING_TO_REAL, F_LWORD_TO_BYTE, FB_CTU_DINT, GEN_AND, F_AND, F_ROR, GEN_CLIENT, F_ULINT_TO_WSTRING, F_SINT_TO_STRING, F_LREAL_TO_LINT, WSTRING2WSTRING, F_WORD_TO_INT, F_UINT_TO_BYTE, F_UDINT_TO_UINT, F_SINT_TO_UDINT, F_UINT_TO_DINT, F_UINT_TO_UDINT, F_UINT_TO_WSTRING, F_WSTRING_TO_UINT, F_DINT_TO_UDINT, E_SPLIT, F_DWORD_TO_LWORD, F_USINT_TO_SINT, F_ULINT_TO_BCD_LWORD, F_BYTE_BCD_TO_USINT, F_DWORD_TO_ULINT, F_BYTE_TO_SINT, F_BYTE_TO_WSTRING, GEN_ARRAY2ARRAY, F_DT_TO_DATE, GEN_STRUCT_DEMUX, F_LEN, GEN_STRUCT_MUX, F_INT_TO_WORD, FB_RANDOM, F_LINT_TO_UDINT, F_EXP, F_USINT_TO_DWORD, F_TIME_IN_MS_TO_ULINT, F_REAL_TO_SINT, F_INT_TO_USINT, Load2Check, F_UDINT_TO_WSTRING, F_EXPT, F_SUB, F_ULINT_TO_REAL, F_REAL_TO_LREAL, F_MID, F_BYTE_TO_UINT, F_BYTE_TO_DWORD, F_INT_TO_UINT, F_DWORD_TO_REAL, F_DINT_TO_BYTE, F_WORD_TO_STRING, F_REAL_TO_STRING, F_SUB_TOD_TOD, SET_AT_INDEX, F_MIN, F_LREAL_TO_ULINT, F_STRING_TO_BYTE, F_BYTE_TO_LWORD, F_STRING_TO_DINT, F_WORD_TO_WSTRING, BOOL2BOOL, F_LINT_TO_INT, F_WSTRING_TO_TIME, FB_CTU_UDINT, F_WSTRING_TO_BOOL, F_INSERT, F_SUB_DT_TIME, F_FIND, F_UDINT_TO_ULINT, F_WORD_TO_UDINT, F_DINT_TO_DWORD, Load1Check, F_WSTRING_TO_USINT, GEN_VALUES2ARRAY, GEN_ARRAY2VALUES, F_WSTRING_TO_WORD, F_DINT_TO_STRING, F_WORD_TO_UINT, F_TIME_IN_US_TO_LINT, F_LINT_TO_DWORD, F_CONCAT, FB_CTUD_ULINT, F_UDINT_TO_LINT, F_SUB_DATE_DATE, F_LWORD_TO_LREAL, F_LWORD_TO_INT, WORD2WORD, E_STOPWATCH, F_LIMIT, F_TIME_IN_S_TO_ULINT, F_LWORD_TO_USINT, F_REAL_TO_DINT, F_DWORD_TO_USINT, E_MERGE, F_SINT_TO_DWORD, E_DEMUX, F_BOOL_TO_UDINT, BYTE2BYTE, FB_TP, F_USINT_TO_BCD_BYTE, F_SINT_TO_DINT, F_UINT_TO_LINT, F_SINT_TO_BYTE, F_ATAN, F_LINT_TO_BYTE, F_BYTE_TO_USINT, F_ULINT_TO_UDINT, FB_SR, F_NOT, F_DINT_TO_INT, F_LINT_TO_DINT, F_DELETE, FB_CTU, GEN_SERVER, GEN_PUBL, F_UDINT_TO_LREAL, F_BOOL_TO_UINT, F_UINT_TO_STRING, E_R_TRIG, F_GE, F_LWORD_BCD_TO_ULINT, F_UDINT_TO_STRING, F_REAL_TO_WSTRING, FB_RS, F_MUX_2, F_LINT_TO_WSTRING, F_USINT_TO_UDINT, F_UINT_TO_ULINT, F_EQ, E_T_FF, F_USINT_TO_REAL, LREAL2LREAL, F_STRING_TO_LREAL, F_ULINT_TO_STRING, F_MOD, E_RTimeOut, F_ULINT_TO_DINT, F_ULINT_TO_BYTE, F_WSTRING_TO_UDINT, F_TIME_TO_WSTRING, GET_STRUCT_VALUE, GEN_PUBLISH, F_REAL_TO_DWORD, F_DWORD_BCD_TO_UDINT, F_INT_TO_LREAL, F_SINT_TO_WSTRING, Conveyor1Check, F_LWORD_TO_SINT, F_GT, F_LINT_TO_REAL, F_TIME_IN_MS_TO_LINT, F_SINT_TO_REAL, F_LOG, F_ULINT_TO_INT, F_DWORD_TO_SINT, F_BOOL_TO_WORD, F_REAL_TO_USINT, E_SWITCH, F_LINT_TO_LREAL, F_STRING_TO_LINT, F_SINT_TO_USINT, F_DINT_TO_REAL, DINT2DINT, F_WORD_TO_ULINT, F_INT_TO_SINT, F_CONCAT_DATE_TOD, F_WSTRING_TO_LREAL, GET_AT_INDEX, F_USINT_TO_LREAL, F_BOOL_TO_WSTRING, FB_CTU_ULINT, F_DINT_TO_LREAL, UDINT2UDINT, F_USINT_TO_BYTE, F_BOOL_TO_STRING, F_LWORD_TO_DWORD, F_LREAL_TO_UDINT, F_STRING_TO_UDINT, F_UDINT_TO_DINT, F_UDINT_TO_BYTE, F_WSTRING_TO_LINT, F_USINT_TO_DINT" Comment="created during deployment"/>
+		<Resource Name="EMB_RES" Type="EMB_RES" Comment="" x="0.0" y="0.0">
+			<FBNetwork>
+				<FB Name="TransLeftCheck_1" Type="TransLeftCheck" Comment="" x="3733.3333333333335" y="7466.666666666667">
+				</FB>
+				<FB Name="Conveyor1Check" Type="Conveyor1Check" Comment="" x="4113.333333333334" y="10220.0">
+				</FB>
+				<FB Name="Load1Check" Type="Load1Check" Comment="" x="3733.3333333333335" y="5066.666666666667">
+				</FB>
+				<FB Name="AtEntry1" Type="SUBSCRIBE_1" Comment="" x="1733.3333333333335" y="-933.3333333333334">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://localhost:4840#;/Objects/1:AtEntry1]"/>
+				</FB>
+				<FB Name="COnveyor1_Actuator" Type="CLIENT_1_0" Comment="" x="7733.333333333334" y="10266.666666666668">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[WRITE;opc.tcp://localhost:4840#;/Objects/1:Conveyor1]"/>
+				</FB>
+				<FB Name="ExitCheck" Type="ExitCheck" Comment="" x="3733.3333333333335" y="533.3333333333334">
+				</FB>
+				<FB Name="Load2Check" Type="Load2Check" Comment="" x="3866.666666666667" y="2266.666666666667">
+				</FB>
+				<FB Name="Conveyor2Check" Type="Conveyor2Check" Comment="" x="3866.666666666667" y="3733.3333333333335">
+				</FB>
+				<FB Name="Load2_Acuator" Type="CLIENT_1_0" Comment="" x="7866.666666666667" y="7200.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[WRITE;opc.tcp://localhost:4840#;/Objects/1:Load2]"/>
+				</FB>
+				<FB Name="Reset" Type="SUBSCRIBE_1" Comment="" x="1866.6666666666667" y="6000.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://localhost:4840#;/Objects/1:Reset]"/>
+				</FB>
+				<FB Name="Load2" Type="SUBSCRIBE_1" Comment="" x="1866.6666666666667" y="13466.666666666668">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://localhost:4840#;/Objects/1:Load2]"/>
+				</FB>
+				<FB Name="TransLeft1" Type="SUBSCRIBE_1" Comment="" x="1866.6666666666667" y="9680.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://localhost:4840#;/Objects/1:TransLeft1]"/>
+				</FB>
+				<FB Name="Load1" Type="SUBSCRIBE_1" Comment="" x="1886.6666666666667" y="10893.333333333334">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://localhost:4840#;/Objects/1:Load1]"/>
+				</FB>
+				<FB Name="TransLeft2" Type="SUBSCRIBE_1" Comment="" x="1866.6666666666667" y="8426.666666666668">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://localhost:4840#;/Objects/1:TransLeft2]"/>
+				</FB>
+				<FB Name="Conveyor2" Type="SUBSCRIBE_1" Comment="" x="1886.6666666666667" y="12226.666666666668">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://localhost:4840#;/Objects/1:Conveyor2]"/>
+				</FB>
+				<FB Name="ExitConv" Type="SUBSCRIBE_1" Comment="" x="1866.6666666666667" y="7200.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://localhost:4840#;/Objects/1:ExitConv]"/>
+				</FB>
+				<FB Name="E_DELAY" Type="E_DELAY" Comment="" x="-933.3333333333334" y="3600.0">
+					<Parameter Name="DT" Value="T#1s"/>
+				</FB>
+				<FB Name="AtTrans1" Type="SUBSCRIBE_1" Comment="" x="1866.6666666666667" y="4933.333333333334">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://localhost:4840#;/Objects/1:AtTrans1]"/>
+				</FB>
+				<FB Name="AtEntry2" Type="SUBSCRIBE_1" Comment="" x="1866.6666666666667" y="2933.3333333333335">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://localhost:4840#;/Objects/1:AtEntry2]"/>
+				</FB>
+				<FB Name="Conveyor2_Actuator" Type="CLIENT_1_0" Comment="" x="7866.666666666667" y="5600.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[WRITE;opc.tcp://localhost:4840#;/Objects/1:Conveyor2]"/>
+				</FB>
+				<FB Name="AtTrans2" Type="SUBSCRIBE_1" Comment="" x="1866.6666666666667" y="4000.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://localhost:4840#;/Objects/1:AtTrans2]"/>
+				</FB>
+				<FB Name="TransLeft2_Actuator" Type="CLIENT_1_0" Comment="" x="7866.666666666667" y="8800.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[WRITE;opc.tcp://localhost:4840#;/Objects/1:TransLeft2]"/>
+				</FB>
+				<FB Name="TransLeft1_Actuator" Type="CLIENT_1_0" Comment="" x="7866.666666666667" y="10380.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[WRITE;opc.tcp://localhost:4840#;/Objects/1:TransLeft1]"/>
+				</FB>
+				<FB Name="AtExit" Type="SUBSCRIBE_1" Comment="" x="1846.6666666666667" y="706.6666666666667">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://localhost:4840#;/Objects/1:AtExit]"/>
+				</FB>
+				<FB Name="Start" Type="SUBSCRIBE_1" Comment="" x="1846.6666666666667" y="1933.3333333333335">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[SUBSCRIBE;opc.tcp://localhost:4840#;/Objects/1:Start]"/>
+				</FB>
+				<FB Name="ExitConv_Acuator" Type="CLIENT_1_0" Comment="" x="7733.333333333334" y="4000.0">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[WRITE;opc.tcp://localhost:4840#;/Objects/1:ExitConv]"/>
+				</FB>
+				<FB Name="Load1_Actuator" Type="CLIENT_1_0" Comment="" x="8000.0" y="11713.333333333334">
+					<Parameter Name="QI" Value="1"/>
+					<Parameter Name="ID" Value="opc_ua[WRITE;opc.tcp://localhost:4840#;/Objects/1:Load1]"/>
+				</FB>
+				<FB Name="MyBasicTest" Type="MyBasicTest" Comment="" x="1866.6666666666667" y="-2080.0">
+				</FB>
+				<EventConnections>
+					<Connection Source="AtEntry1.IND" Destination="TransLeftCheck_1.REQ" Comment="" dx1="586.6666666666667"/>
+					<Connection Source="AtEntry1.IND" Destination="Conveyor1Check.REQ" Comment="" dx1="773.3333333333334"/>
+					<Connection Source="AtEntry1.IND" Destination="Load1Check.REQ" Comment="" dx1="586.6666666666667"/>
+					<Connection Source="Conveyor1Check.CNF" Destination="COnveyor1_Actuator.REQ" Comment="" dx1="1340.0"/>
+					<Connection Source="Conveyor1Check.INITO" Destination="COnveyor1_Actuator.INIT" Comment="" dx1="1340.0"/>
+					<Connection Source="Load2Check.CNF" Destination="Load2_Acuator.REQ" Comment="" dx1="1606.6666666666667"/>
+					<Connection Source="TransLeft1.IND" Destination="Conveyor1Check.REQ" Comment="" dx1="706.6666666666667"/>
+					<Connection Source="TransLeft1.INITO" Destination="Conveyor1Check.INIT" Comment="" dx1="706.6666666666667"/>
+					<Connection Source="TransLeft2.IND" Destination="Load2Check.REQ" Comment="" dx1="586.6666666666667"/>
+					<Connection Source="TransLeft2.IND" Destination="Load1Check.REQ" Comment="" dx1="520.0"/>
+					<Connection Source="E_DELAY.EO" Destination="AtEntry1.INIT" Comment="" dx1="1013.3333333333334"/>
+					<Connection Source="E_DELAY.EO" Destination="Reset.INIT" Comment="" dx1="1080.0"/>
+					<Connection Source="E_DELAY.EO" Destination="Load2.INIT" Comment="" dx1="1080.0"/>
+					<Connection Source="E_DELAY.EO" Destination="TransLeft1.INIT" Comment="" dx1="1080.0"/>
+					<Connection Source="E_DELAY.EO" Destination="Load1.INIT" Comment="" dx1="1086.6666666666667"/>
+					<Connection Source="E_DELAY.EO" Destination="TransLeft2.INIT" Comment="" dx1="1080.0"/>
+					<Connection Source="E_DELAY.EO" Destination="Conveyor2.INIT" Comment="" dx1="1086.6666666666667"/>
+					<Connection Source="E_DELAY.EO" Destination="ExitConv.INIT" Comment="" dx1="1080.0"/>
+					<Connection Source="START.WARM" Destination="E_DELAY.START" Comment="" dx1="293.33333333333337"/>
+					<Connection Source="START.COLD" Destination="E_DELAY.START" Comment="" dx1="293.33333333333337"/>
+					<Connection Source="AtTrans1.IND" Destination="TransLeftCheck_1.REQ" Comment="" dx1="520.0"/>
+					<Connection Source="AtTrans1.IND" Destination="Load1Check.REQ" Comment="" dx1="520.0"/>
+					<Connection Source="E_DELAY.EO" Destination="AtTrans1.INIT" Comment="" dx1="1080.0"/>
+					<Connection Source="AtEntry2.IND" Destination="Load2Check.REQ" Comment="" dx1="586.6666666666667"/>
+					<Connection Source="AtEntry2.INITO" Destination="Load2_Acuator.INIT" Comment="" dx1="2586.666666666667"/>
+					<Connection Source="E_DELAY.EO" Destination="AtEntry2.INIT" Comment="" dx1="1080.0"/>
+					<Connection Source="Conveyor2Check.CNF" Destination="Conveyor2_Actuator.REQ" Comment="" dx1="1526.6666666666667"/>
+					<Connection Source="AtTrans2.IND" Destination="TransLeftCheck_1.REQ" Comment="" dx1="520.0"/>
+					<Connection Source="AtTrans2.IND" Destination="Conveyor2Check.REQ" Comment="" dx1="586.6666666666667"/>
+					<Connection Source="AtTrans2.INITO" Destination="Conveyor2_Actuator.INIT" Comment="" dx1="2600.0"/>
+					<Connection Source="E_DELAY.EO" Destination="AtTrans2.INIT" Comment="" dx1="1080.0"/>
+					<Connection Source="TransLeftCheck_1.CNF" Destination="TransLeft2_Actuator.REQ" Comment="" dx1="1606.6666666666667"/>
+					<Connection Source="AtTrans2.INITO" Destination="TransLeft2_Actuator.INIT" Comment="" dx1="2613.3333333333335"/>
+					<Connection Source="TransLeftCheck_1.CNF" Destination="TransLeft1_Actuator.REQ" Comment="" dx1="1606.6666666666667"/>
+					<Connection Source="AtTrans2.INITO" Destination="TransLeft1_Actuator.INIT" Comment="" dx1="2613.3333333333335"/>
+					<Connection Source="AtExit.IND" Destination="ExitCheck.REQ" Comment="" dx1="526.6666666666667"/>
+					<Connection Source="E_DELAY.EO" Destination="AtExit.INIT" Comment="" dx1="1066.6666666666667"/>
+					<Connection Source="E_DELAY.EO" Destination="Start.INIT" Comment="" dx1="1066.6666666666667"/>
+					<Connection Source="ExitCheck.CNF" Destination="ExitConv_Acuator.REQ" Comment="" dx1="1633.3333333333335"/>
+					<Connection Source="AtExit.INITO" Destination="ExitConv_Acuator.INIT" Comment="" dx1="2526.666666666667"/>
+					<Connection Source="Load1Check.CNF" Destination="Load1_Actuator.REQ" Comment="" dx1="1740.0"/>
+					<Connection Source="AtTrans1.INITO" Destination="Load1_Actuator.INIT" Comment="" dx1="2653.3333333333335"/>
+					<Connection Source="START.COLD" Destination="MyBasicTest.INIT" Comment="" dx1="513.3333333333334"/>
+					<Connection Source="START.WARM" Destination="MyBasicTest.INIT" Comment="" dx1="513.3333333333334"/>
+				</EventConnections>
+				<DataConnections>
+					<Connection Source="AtEntry1.RD_1" Destination="TransLeftCheck_1.AtEntry1" Comment="" dx1="586.6666666666667"/>
+					<Connection Source="AtEntry1.RD_1" Destination="Conveyor1Check.AtEntry1" Comment="" dx1="773.3333333333334"/>
+					<Connection Source="AtEntry1.RD_1" Destination="Load1Check.AtEntry1" Comment="" dx1="586.6666666666667"/>
+					<Connection Source="Conveyor1Check.QO" Destination="COnveyor1_Actuator.SD_1" Comment="" dx1="1340.0"/>
+					<Connection Source="Load2Check.QO" Destination="Load2_Acuator.SD_1" Comment="" dx1="1606.6666666666667"/>
+					<Connection Source="TransLeft1.RD_1" Destination="Conveyor1Check.TransLeft" Comment="" dx1="706.6666666666667"/>
+					<Connection Source="TransLeft2.RD_1" Destination="Load1Check.TransLeft" Comment="" dx1="520.0"/>
+					<Connection Source="TransLeft2.RD_1" Destination="Load2Check.TransLeft2" Comment="" dx1="586.6666666666667"/>
+					<Connection Source="AtTrans1.RD_1" Destination="TransLeftCheck_1.AtTrans1" Comment="" dx1="520.0"/>
+					<Connection Source="AtTrans1.RD_1" Destination="Load1Check.AtTrans1" Comment="" dx1="520.0"/>
+					<Connection Source="AtEntry2.RD_1" Destination="Load2Check.AtEntry2" Comment="" dx1="586.6666666666667"/>
+					<Connection Source="Conveyor2Check.QO" Destination="Conveyor2_Actuator.SD_1" Comment="" dx1="1526.6666666666667"/>
+					<Connection Source="AtTrans2.RD_1" Destination="TransLeftCheck_1.AtTrans2" Comment="" dx1="520.0"/>
+					<Connection Source="AtTrans2.RD_1" Destination="Conveyor2Check.QI" Comment="" dx1="586.6666666666667"/>
+					<Connection Source="TransLeftCheck_1.QO" Destination="TransLeft2_Actuator.SD_1" Comment="" dx1="1606.6666666666667"/>
+					<Connection Source="TransLeftCheck_1.QO" Destination="TransLeft1_Actuator.SD_1" Comment="" dx1="1606.6666666666667"/>
+					<Connection Source="AtExit.RD_1" Destination="ExitCheck.AtExit" Comment="" dx1="526.6666666666667"/>
+					<Connection Source="ExitCheck.QO" Destination="ExitConv_Acuator.SD_1" Comment="" dx1="1633.3333333333335"/>
+					<Connection Source="Load1Check.QO" Destination="Load1_Actuator.SD_1" Comment="" dx1="1740.0"/>
+				</DataConnections>
+			</FBNetwork>
+		</Resource>
+	</Device>
+	<Mapping From="VariablesInitApp.E_DELAY" To="FORTE_PC.EMB_RES.E_DELAY"/>
+	<Mapping From="VariablesInitApp.AtTrans2_Init" To="FORTE_PC.EMB_RES.AtTrans2_Init"/>
+	<Mapping From="VariablesInitApp.AtExit_Init" To="FORTE_PC.EMB_RES.AtExit_Init"/>
+	<Mapping From="VariablesInitApp.Load1_Init" To="FORTE_PC.EMB_RES.Load1_Init"/>
+	<Mapping From="VariablesInitApp.ExitConv_Init" To="FORTE_PC.EMB_RES.ExitConv_Init"/>
+	<Mapping From="VariablesInitApp.TransLeft2_Init" To="FORTE_PC.EMB_RES.TransLeft2_Init"/>
+	<Mapping From="VariablesInitApp.AtTrans1_Init" To="FORTE_PC.EMB_RES.AtTrans1_Init"/>
+	<Mapping From="VariablesInitApp.Reset_Init" To="FORTE_PC.EMB_RES.Reset_Init"/>
+	<Mapping From="VariablesInitApp.Load2_Init" To="FORTE_PC.EMB_RES.Load2_Init"/>
+	<Mapping From="VariablesInitApp.AtEntry2_Init" To="FORTE_PC.EMB_RES.AtEntry2_Init"/>
+	<Mapping From="VariablesInitApp.Start_Init" To="FORTE_PC.EMB_RES.Start_Init"/>
+	<Mapping From="VariablesInitApp.Conveyor2_Init" To="FORTE_PC.EMB_RES.Conveyor2_Init"/>
+	<Mapping From="VariablesInitApp.TransLeft1_Init" To="FORTE_PC.EMB_RES.TransLeft1_Init"/>
+	<Mapping From="VariablesInitApp.Conveyor1_Init" To="FORTE_PC.EMB_RES.Conveyor1_Init"/>
+	<Mapping From="VariablesInitApp.AtEntry1_Init" To="FORTE_PC.EMB_RES.AtEntry1_Init"/>
+	<Mapping From="VariablesInitApp.NodeInit" To="FORTE_PC.EMB_RES.NodeInit"/>
+	<Mapping From="FactoryioLuaJITDemo.TransLeftCheck_1" To="FORTE_PC_1.EMB_RES.TransLeftCheck_1"/>
+	<Mapping From="FactoryioLuaJITDemo.Conveyor1Check" To="FORTE_PC_1.EMB_RES.Conveyor1Check"/>
+	<Mapping From="FactoryioLuaJITDemo.Load1Check" To="FORTE_PC_1.EMB_RES.Load1Check"/>
+	<Mapping From="FactoryioLuaJITDemo.AtEntry1" To="FORTE_PC_1.EMB_RES.AtEntry1"/>
+	<Mapping From="FactoryioLuaJITDemo.COnveyor1_Actuator" To="FORTE_PC_1.EMB_RES.COnveyor1_Actuator"/>
+	<Mapping From="FactoryioLuaJITDemo.ExitCheck" To="FORTE_PC_1.EMB_RES.ExitCheck"/>
+	<Mapping From="FactoryioLuaJITDemo.Load2Check" To="FORTE_PC_1.EMB_RES.Load2Check"/>
+	<Mapping From="FactoryioLuaJITDemo.Conveyor2Check" To="FORTE_PC_1.EMB_RES.Conveyor2Check"/>
+	<Mapping From="FactoryioLuaJITDemo.Load2_Acuator" To="FORTE_PC_1.EMB_RES.Load2_Acuator"/>
+	<Mapping From="FactoryioLuaJITDemo.Reset" To="FORTE_PC_1.EMB_RES.Reset"/>
+	<Mapping From="FactoryioLuaJITDemo.Load2" To="FORTE_PC_1.EMB_RES.Load2"/>
+	<Mapping From="FactoryioLuaJITDemo.TransLeft1" To="FORTE_PC_1.EMB_RES.TransLeft1"/>
+	<Mapping From="FactoryioLuaJITDemo.Load1" To="FORTE_PC_1.EMB_RES.Load1"/>
+	<Mapping From="FactoryioLuaJITDemo.TransLeft2" To="FORTE_PC_1.EMB_RES.TransLeft2"/>
+	<Mapping From="FactoryioLuaJITDemo.Conveyor2" To="FORTE_PC_1.EMB_RES.Conveyor2"/>
+	<Mapping From="FactoryioLuaJITDemo.ExitConv" To="FORTE_PC_1.EMB_RES.ExitConv"/>
+	<Mapping From="FactoryioLuaJITDemo.E_DELAY" To="FORTE_PC_1.EMB_RES.E_DELAY"/>
+	<Mapping From="FactoryioLuaJITDemo.AtTrans1" To="FORTE_PC_1.EMB_RES.AtTrans1"/>
+	<Mapping From="FactoryioLuaJITDemo.AtEntry2" To="FORTE_PC_1.EMB_RES.AtEntry2"/>
+	<Mapping From="FactoryioLuaJITDemo.Conveyor2_Actuator" To="FORTE_PC_1.EMB_RES.Conveyor2_Actuator"/>
+	<Mapping From="FactoryioLuaJITDemo.AtTrans2" To="FORTE_PC_1.EMB_RES.AtTrans2"/>
+	<Mapping From="FactoryioLuaJITDemo.TransLeft2_Actuator" To="FORTE_PC_1.EMB_RES.TransLeft2_Actuator"/>
+	<Mapping From="FactoryioLuaJITDemo.TransLeft1_Actuator" To="FORTE_PC_1.EMB_RES.TransLeft1_Actuator"/>
+	<Mapping From="FactoryioLuaJITDemo.AtExit" To="FORTE_PC_1.EMB_RES.AtExit"/>
+	<Mapping From="FactoryioLuaJITDemo.Start" To="FORTE_PC_1.EMB_RES.Start"/>
+	<Mapping From="FactoryioLuaJITDemo.ExitConv_Acuator" To="FORTE_PC_1.EMB_RES.ExitConv_Acuator"/>
+	<Mapping From="FactoryioLuaJITDemo.Load1_Actuator" To="FORTE_PC_1.EMB_RES.Load1_Actuator"/>
+	<Mapping From="FactoryioLuaJITDemo.MyBasicTest" To="FORTE_PC_1.EMB_RES.MyBasicTest"/>
+	<Segment Name="Ethernet" Type="Ethernet" Comment="" x="2786.666666666667" y="1646.6666666666667" dx1="2000.0">
+		<Attribute Name="Color" Type="STRING" Value="121,172,203" Comment="color"/>
+	</Segment>
+	<Link SegmentName="Ethernet" CommResource="FORTE_PC" Comment="">
+	</Link>
+	<Link SegmentName="Ethernet" CommResource="FORTE_PC_1" Comment="">
+	</Link>
+</System>
